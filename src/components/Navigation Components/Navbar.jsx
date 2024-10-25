@@ -86,7 +86,7 @@ const Navbar = () => {
               : "fixed left-[-100%]"
             }`}
         >
-          <img src="" alt="Logo" className="w-42 h-28 ml-11" />
+          <img src={logo} alt="Logo" className="w-42 h-28 ml-11" />
           {/* <h1 className="w-full text-3xl font-bold text-[#00df9a] m-4">LuLa 3D print</h1> */}
 
           <motion.ul
