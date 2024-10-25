@@ -57,9 +57,8 @@ const Tab = ({ children, setPosition, path }) => {
           opacity: 1,
         });
       }}
-      className={`relative z-10 block cursor-pointer px-3 py-1.5 text-xs uppercase mix-blend-normal md:px-5 md:py-3 md:text-base transition-colors duration-300 whitespace-nowrap ${
-        isActive ? "text-[#00df9a]" : "text-white"
-      }`}
+      className={`relative z-10 block cursor-pointer px-3 py-1.5 text-xs uppercase mix-blend-normal md:px-5 md:py-3 md:text-base transition-colors duration-300 whitespace-nowrap ${isActive ? "text-white" : "text-white"
+        }`}
     >
       {children}
     </Link>
@@ -72,7 +71,7 @@ const Cursor = ({ position }) => {
       animate={{
         ...position,
       }}
-      className="absolute z-0 h-7 rounded-full bg-[#00df9a] md:h-12"
+      className="absolute z-0 h-7 rounded-full bg-[#bd2025] md:h-12"
     />
   );
 };
