@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import { motion } from "framer-motion";
 
-import { Outlet, Link,  useLocation } from "react-router-dom";
+import { Outlet, Link, useLocation } from "react-router-dom";
 import { SlideTabsComponent } from "./SlideTabsComponent";
-// import logo from '../assets/LULA.Lightgreen (1).png';
+import logo from '../../assets/Logo beli.png';
 // import small_logo from '../assets/1 Lightgreen png (1).png';
 
 const Navbar = () => {
@@ -73,7 +73,7 @@ const Navbar = () => {
   return (
     <div className="fixed w-full top-0 left-0 z-50 bg-black">
       <div className="flex justify-between items-center h-32 max-w-full px-2 text-white">
-        <img src="" alt="Logo" width="225" />
+        <img src={logo} alt="Logo" width="225" />
         {/* <h1 className="w-full text-3xl font-bold text-[#00df9a]">LuLa</h1> */}
         <SlideTabsComponent></SlideTabsComponent>
         <div onClick={handleNav} className="block md:hidden mb-4">
@@ -81,13 +81,12 @@ const Navbar = () => {
         </div>
 
         <div
-          className={`${
-            nav
+          className={`${nav
               ? "fixed left-0 top-0 w-[65%] h-full border-r border-r-gray-900 bg-[#000300] ease-in-out duration-500"
               : "fixed left-[-100%]"
-          }`}
+            }`}
         >
-              <img src="" alt="Logo" className="w-42 h-28 ml-11" />
+          <img src="" alt="Logo" className="w-42 h-28 ml-11" />
           {/* <h1 className="w-full text-3xl font-bold text-[#00df9a] m-4">LuLa 3D print</h1> */}
 
           <motion.ul
@@ -103,7 +102,7 @@ const Navbar = () => {
             {navigationItems.map((item) => (
               <Link to={item.path} key={item.name}>
                 <motion.li
-                  className={`p-4 border-b cursor-pointer border-gray-600 ${location.pathname === item.path ? "text-[#00df9a]" : "text-white" }`}
+                  className={`p-4 border-b cursor-pointer border-gray-600 ${location.pathname === item.path ? "text-[#00df9a]" : "text-white"}`}
                   variants={itemVariants}
                   onClick={handleNav}
                 >
