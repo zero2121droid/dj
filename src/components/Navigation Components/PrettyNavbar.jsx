@@ -7,7 +7,7 @@ const Navigation = () => {
   const background = useTransform(
     scrollY,
     [0, 100],
-    ["rgba(0, 183, 255, 0)", "rgba(0, 0, 0)"]
+    ["rgba(0, 0, 0, 0)", "rgba(0, 0, 0)"]
   );
   const height = useTransform(scrollY, [0, 100], [120, 90]);
 
