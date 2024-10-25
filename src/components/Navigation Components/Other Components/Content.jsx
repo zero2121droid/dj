@@ -15,12 +15,12 @@ const Content = () => {
       {boxCount.map((box, index) => (
         <div className="box" key={index} />
       ))}
-      <div className="hero">
+      {/* <div className="hero">
         <img className="w-full" src="https://images.unsplash.com/photo-1566545455366-bcae28fd3929?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1956&q=80" />
       </div>
       {boxCount.map((box, index) => (
-        <div className="box" key={index} />
-      ))}
+        <div className="box" key={index} /> */}
+      {/* ))} */}
     </div>
   );
 };
