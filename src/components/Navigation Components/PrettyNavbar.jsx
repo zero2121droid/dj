@@ -78,15 +78,14 @@ const Navigation = () => {
     <motion.div
       id="navigation"
       style={{ background, height }}
-      className="fixed top-0 w-full flex items-center justify-between px-6  transition-all duration-300"
+      className="fixed top-0 w-full flex items-center justify-between px-6 z-50  transition-all duration-300"
     >
       <div className="text-white font-bold text-lg"> <img src={logo} alt="Logo" className="md:ml-2  md:mt-10  mt-10" width="225" /></div>
       <ul className="flex space-x-4 text-white hidden md:flex">
-        <li><a href="/" className="text-lg font-bold hover:underline">Home</a></li>
-        <li><a href="#about" className="text-lg font-bold hover:underline">About</a></li>
-        <li><a href="#contact" className="text-lg font-bold hover:underline">Contact</a></li>
+        <li><Link to="/" className="text-lg font-bold hover:underline">Home</Link></li>
+        <li><Link to="/about" className="text-lg font-bold hover:underline">About</Link></li>
+        <li><Link to="/contact" className="text-lg font-bold hover:underline">Contact</Link></li>
       </ul>
-
       <div onClick={handleNav} className="block md:hidden mb-4 text-white">
           {nav ? <AiOutlineClose size={33} /> : <AiOutlineMenu size={33} />}
         </div>
