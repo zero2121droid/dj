@@ -72,8 +72,8 @@ const Navbar = () => {
 
   return (
     <div className="fixed w-full top-0 left-0 z-50 bg-black">
-      <div className="flex justify-between items-center h-32 max-w-full px-2 text-white">
-        <img src={logo} alt="Logo" width="225" />
+      <div className="flex justify-between items-center h-28 max-w-full px-2 text-white">
+        <img src={logo} alt="Logo" className="mt-10 ml-2" width="225" />
         {/* <h1 className="w-full text-3xl font-bold text-[#00df9a]">LuLa</h1> */}
         <SlideTabsComponent></SlideTabsComponent>
         <div onClick={handleNav} className="block md:hidden mb-4">
