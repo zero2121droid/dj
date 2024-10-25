@@ -1,8 +1,9 @@
 import React from 'react'
+import Content from '../components/Navigation Components/Other Components/Content'
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <Content />
   )
 }
 

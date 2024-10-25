@@ -3,6 +3,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css';
 import Home from './pages/Home';
 import Navbar from './components/Navigation Components/Navbar';
+import PrettyNavbar from './components/Navigation Components/PrettyNavbar';
+import Content from './components/Navigation Components/Other Components/Content';
 
 function App() {
   return (
@@ -15,7 +17,8 @@ function App() {
   
       </header> */}
       <BrowserRouter>
-      <Navbar />
+      {/* <Navbar /> */}
+      <PrettyNavbar />
       <Routes>
       <Route path="/" element={<Home />} />
       </Routes>
