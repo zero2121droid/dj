@@ -67,10 +67,8 @@ const Navigation = () => {
 
   const navigationItems = [
     { path: "/", name: "Home" },
-    { path: "/3D-Stampa", name: "3D Stampa" },
-    { path: "/Services", name: "Usluge" },
-    { path: "/Contact", name: "Kontakt" },
-    { path: "/AboutUs", name: "O nama" },
+    { path: "/Contact", name: "Contact" },
+    { path: "/AboutUs", name: "About Us" },
   ];
   const location = useLocation();
 
@@ -96,7 +94,7 @@ const Navigation = () => {
               : "fixed left-[-100%]"
             }`}
         >
-          <img src={logo} alt="Logo" className="w-42 h-28 ml-24" />
+          <img src={logo} alt="Logo" className="w-42 h-28 ml-44" />
           <motion.ul
             className="uppercase p-4"
             initial="hidden"
