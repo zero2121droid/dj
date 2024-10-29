@@ -79,7 +79,7 @@ const Navigation = () => {
       className="fixed top-0 w-full flex items-center justify-between px-6 z-50  transition-all duration-300"
     >
       <div className="text-white font-bold text-lg"> <img src={logo} alt="Logo" className="md:ml-2  md:mt-10  mt-10" width="225" /></div>
-      <ul className="flex space-x-4 text-white hidden md:flex">
+      <ul className=" space-x-4 text-white hidden md:flex">
         <li><Link to="/" className="text-lg font-bold hover:underline">Home</Link></li>
         <li><Link to="/about" className="text-lg font-bold hover:underline">About</Link></li>
         <li><Link to="/contact" className="text-lg font-bold hover:underline">Contact</Link></li>
