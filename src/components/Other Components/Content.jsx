@@ -42,10 +42,13 @@ const Content = () => {
       >
 
    
-        <div className="card w-full max-w-3xl bg-inherit shadow-xl text-gray-100 mt-12">
+        <div className="card w-full max-w-3xl bg-black bg-opacity-50 text-gray-100 mt-12">
           <div className="card-body p-6">
-          <h1 className="md:text-7xl sm:text-6xl text-6xl font-bold mb-8">Dejan Jorgacevic</h1>
-            <p className="text-lg leading-relaxed">
+          <h1 className="md:text-7xl sm:text-6xl text-6xl font-bold font-mono">Dejan Jorgacevic</h1>
+            <div className="flex justify-center">
+            <div className="divider w-[95%] md:w-[90%] h-[2px] bg-white"></div>
+            </div>
+            <p className="text-lg leading-relaxed font-bold text-[#bd2025] mt-4 font-mono">
               Mladi i talentovani Dejan Jorgaćević DJ-ingom i produkcijom počinje da se bavi 2014. godine. Radio je u mnogim klubovima i na mnogim festivalima, sa imenima kao što su DJ Dea, Igor Garnier, DJ Architect, Geo Da Silva, Cavin Viviano, Erick Kasell, Divolly and Markward i mnogi drugim.
               Takođe je sarađivao i sa domaćom scenom i delio stage sa imenima kao što su: Coby, Mike Ride, Gru, Gazda Paja, Sanja Vučić...
               Dejan Jorgaćević je jedan od najtraženijih na našim prostorima. On je resident DJ u SAFARI ABC. U njegovom setu se može čuti sve od komercijalne house muzike pa do balkanske trend muzike pa takođe i afro house.
