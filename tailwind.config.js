@@ -7,6 +7,8 @@ module.exports = {
     extend: {},
     screens: {}
   },
-  plugins: [],
+  plugins: [
+    require('daisyui'),
+  ],
 }
 
