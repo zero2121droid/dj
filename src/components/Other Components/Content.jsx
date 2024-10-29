@@ -22,7 +22,7 @@ const Content = () => {
       <div className="hero">
         <video
           key={currentVideo}
-          className="w-full md:w-3/4 lg:w-1/2 mx-auto"
+          className="w-full mx-auto"
           autoPlay
           loop
           muted
