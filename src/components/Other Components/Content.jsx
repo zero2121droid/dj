@@ -42,7 +42,7 @@ const Content = () => {
       >
 
    
-        <div className="card w-full max-w-3xl bg-black bg-opacity-60 text-gray-100 mt-12">
+        <div className="card w-full max-w-3xl bg-black bg-opacity-70 text-gray-100 mt-12">
           <div className="card-body p-6">
           <h1 className="md:text-7xl sm:text-6xl text-6xl font-bold font-mono">Dejan Jorgaćević</h1>
             <div className="flex justify-center">
