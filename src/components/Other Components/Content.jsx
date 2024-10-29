@@ -1,5 +1,6 @@
 import React from "react";
-import video from "../../assets/Deki Safari 3.mp4"
+import video from "../../assets/cover-video.mp4"
+import video2 from "../../assets/Deki Safari 3.mp4"
 
 const boxCount = Array.apply(null, Array(100));
 
@@ -7,7 +8,7 @@ const Content = () => {
   return (
     <div id="content">
       <div className="hero">
-      <video className="w-full" autoPlay loop muted playsInline>
+        <video className="w-full" autoPlay loop muted playsInline>
           <source src={video} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
