@@ -4,7 +4,7 @@ import './App.css';
 import Home from './pages/Home';
 import Navbar from './components/Navigation Components/Navbar';
 import PrettyNavbar from './components/Navigation Components/PrettyNavbar';
-import Content from './components/Navigation Components/Other Components/Content';
+
 
 function App() {
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import video from "../../../assets/Deki Safari 3.mp4"
+import video from "../../assets/Deki Safari 3.mp4"
 
 const boxCount = Array.apply(null, Array(100));
 
