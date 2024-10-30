@@ -67,7 +67,7 @@ const Navigation = () => {
 
   const navigationItems = [
     { path: "/", name: "Home" },
-    { path: "/Contact", name: "Contact" },
+    { path: "/gallery", name: "Gallery" },
     { path: "/AboutUs", name: "About Us" },
   ];
   const location = useLocation();
@@ -81,7 +81,7 @@ const Navigation = () => {
       <div className="text-white font-bold text-lg"> <img src={logo} alt="Logo" className="md:ml-2  md:mt-10  mt-10" width="225" /></div>
       <ul className=" space-x-4 text-white font-mono hidden md:flex">
         <li><Link to="/" className="text-lg font-bold hover:underline">Home</Link></li>
-        <li><Link to="/about" className="text-lg font-bold hover:underline">About</Link></li>
+        <li><Link to="/gallery" className="text-lg font-bold hover:underline">Gallery</Link></li>
         <li><Link to="/contact" className="text-lg font-bold hover:underline">Contact</Link></li>
       </ul>
       <div onClick={handleNav} className="block md:hidden mb-4 text-white">

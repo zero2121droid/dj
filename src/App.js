@@ -4,6 +4,8 @@ import './App.css';
 import Home from './pages/Home';
 import Navbar from './components/Navigation Components/Navbar';
 import PrettyNavbar from './components/Navigation Components/PrettyNavbar';
+import Footer from './components/Other Components/Footer';
+import Gallery from './pages/Gallery';
 
 
 function App() {
@@ -21,8 +23,11 @@ function App() {
       <PrettyNavbar />
       <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/gallery" element={<Gallery />} />
       </Routes>
+      <Footer />
       </BrowserRouter>
+      
     </div>
   );
 }
