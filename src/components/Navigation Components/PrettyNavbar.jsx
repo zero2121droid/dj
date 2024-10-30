@@ -90,11 +90,11 @@ const Navigation = () => {
 
         <div
           className={`${nav
-              ? "fixed left-0 top-0 w-[70%] h-full border-r border-r-gray-900 bg-[#000300] ease-in-out duration-500"
+              ? "fixed left-0 top-0 w-[66%] h-full border-r border-r-gray-900 bg-[#000300] ease-in-out duration-500"
               : "fixed left-[-100%]"
             }`}
         >
-          <img src={logo} alt="Logo" className="w-42 h-28 ml-44" />
+          <img src={logo} alt="Logo" className="w-28 h-32 ml-16" />
           <motion.ul
             className="uppercase p-4"
             initial="hidden"
