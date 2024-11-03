@@ -68,7 +68,7 @@ const Navigation = () => {
   const navigationItems = [
     { path: "/", name: "Home" },
     { path: "/gallery", name: "Gallery" },
-    { path: "/AboutUs", name: "About Us" },
+    { path: "/videos", name: "Videos" },
   ];
   const location = useLocation();
 
@@ -82,7 +82,7 @@ const Navigation = () => {
       <ul className=" space-x-4 text-white font-mono hidden md:flex">
         <li><Link to="/" className="text-lg font-bold hover:underline">Home</Link></li>
         <li><Link to="/gallery" className="text-lg font-bold hover:underline">Gallery</Link></li>
-        <li><Link to="/contact" className="text-lg font-bold hover:underline">Contact</Link></li>
+        <li><Link to="/videos" className="text-lg font-bold hover:underline">Videos</Link></li>
       </ul>
       <div onClick={handleNav} className="block md:hidden mb-4 text-white">
           {nav ? <AiOutlineClose size={33} /> : <AiOutlineMenu size={33} />}

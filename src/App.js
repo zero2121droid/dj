@@ -6,6 +6,7 @@ import Navbar from './components/Navigation Components/Navbar';
 import PrettyNavbar from './components/Navigation Components/PrettyNavbar';
 import Footer from './components/Other Components/Footer';
 import Gallery from './pages/Gallery';
+import Videos from './pages/Videos';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
       <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/gallery" element={<Gallery />} />
+      <Route path="/videos" element={<Videos />} />
       </Routes>
       <Footer />
       </BrowserRouter>
