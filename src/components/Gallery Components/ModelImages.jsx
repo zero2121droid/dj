@@ -1,43 +1,50 @@
 // src/imagePaths.js
-import image1 from '../../assets/I';
-import image2 from '../assets/3dprinting-2048px-2393.webp';
-import image3 from '../assets/7 Amazing Real-World Examples Of 3D Printing In 2018.png';
-import image4 from '../assets/8cc92e104508a9bd59f94f39e1d559eb_preview_featured.jpg';
-import image5 from '../assets/54ab2b69589bd.webp';
-import image6 from '../assets/2020-01-24-15.04.42-scaled.jpg';
-import image7 from '../assets/Assa_Ashuach_Studio_Sepida_Skins__Ai-Midsole_57-1024x516.jpg';
-import image8 from '../assets/MillenniumFalcon-2-scaled.webp';
-import image9 from '../assets/3D Skener.jpg';
-import image10 from '../assets/3D Skener (2).jpg';
-import image11 from '../assets/Bambu Lab X1 (2).jpg';
-import image12 from '../assets/Dinosaurus.jpg';
-import image13 from '../assets/Držač Patika.jpg';
-import image14 from '../assets/Držač Patika (2).jpg';
-import image15 from '../assets/Kišobran Za Auto.jpg';
-import image16 from '../assets/Kuka.png';
-import image17 from '../assets/Kukica Kišobrana.jpg';
-import image18 from '../assets/Kutija Za Displej.png';
-import image19 from '../assets/Nastavak Kuke.png';
-import image20 from '../assets/No Name.png';
-import image21 from '../assets/Svašata.jpg';
-import image22 from '../assets/Zupčanik Balirke.jpg';
-import image23 from '../assets/Zupčanika Za Proizvodnju.jpg';
 
-// Using an array of image paths
-const images  = [
+import image1 from '../../assets/ISP_6809.jpg';
+import image2 from '../../assets/ISP_6830.JPG';
+import image3 from '../../assets/ISP_6831.JPG';
+import image4 from '../../assets/ISP_6832.JPG';
+import image5 from '../../assets/ISP_6833.JPG';
+import image6 from '../../assets/ISP_6834.JPG';
+// import image7 from '../../assets/ISP_6835.JPG';
+import image8 from '../../assets/ISP_6843.JPG';
+import image9 from '../../assets/ISP_6846.JPG';
+import image10 from '../../assets/ISP_6847.JPG';
+import image11 from '../../assets/ISP_6848.JPG';
+import image12 from '../../assets/ISP_6849.JPG';
+// import image13 from '../../assets/ISP_6853.JPG';
+import image14 from '../../assets/ISP_6864.JPG';
+import image15 from '../../assets/ISP_6865.JPG';
+import image16 from '../../assets/ISP_6866.JPG';
+import image17 from '../../assets/ISP_6867.JPG';
+import image18 from '../../assets/ISP_6876.JPG';
+import image19 from '../../assets/ISP_6878.JPG';
+import image20 from '../../assets/ISP_6915.JPG';
+import image21 from '../../assets/ISP_6927.JPG';
+import image22 from '../../assets/ISP_6932.JPG';
+import image23 from '../../assets/ISP_6933.JPG';
+import image24 from '../../assets/ISP_6934.JPG';
+import image25 from '../../assets/ISP_6935.JPG';
+import image26 from '../../assets/ISP_6945.JPG';
+import image27 from '../../assets/ISP_6947.JPG';
+import image28 from '../../assets/ISP_6950.JPG';
+import image29 from '../../assets/ISP_6953.JPG';
+import image30 from '../../assets/ISP_6965.JPG';
+
+const safariImages = [
     image1,
     image2,
     image3,
     image4,
     image5,
     image6,
-    image7,
+    // image7,
     image8,
-    image9, 
+    image9,
     image10,
     image11,
     image12,
-    image13,
+    // image13,
     image14,
     image15,
     image16,
@@ -48,6 +55,13 @@ const images  = [
     image21,
     image22,
     image23,
-  ];
-  
-  export default images ;
+    image24,
+    image25,
+    image26,
+    image27,
+    image28,
+    image29,
+    image30,
+];
+
+export default safariImages;
