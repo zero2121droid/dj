@@ -3,7 +3,7 @@ import AnimateIn from '../Other Components/AnimateIn'
 
 const GalleryHeader = () => {
   return (
-    <div className='bg-black max-w-full  w-full mx-auto text-center flex flex-col justify-center pb-20'>
+    <div className='max-w-full  w-full mx-auto text-center flex flex-col justify-center pb-20'>
  <AnimateIn
           
           from="opacity-0 -translate-y-16" 
