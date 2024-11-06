@@ -1,6 +1,6 @@
 // src/imagePaths.js
 
-import image1 from '../../assets/ISP_6809.jpg';
+import image1 from '../../assets/ISP_6809.JPG';
 import image2 from '../../assets/ISP_6830.JPG';
 import image3 from '../../assets/ISP_6831.JPG';
 import image4 from '../../assets/ISP_6832.JPG';
