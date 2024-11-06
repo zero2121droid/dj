@@ -14,13 +14,13 @@ const VideoHeader = () => {
   
     >
      <div className='pt-12 pb-4'>
-         <h1 className='md:text-7xl sm:text-6xl text-4xl text-white font-bold md:py-6'>
+         <h1 className='md:text-7xl sm:text-6xl text-4xl text-white font-bold md:py-6 font:mono'>
          YouTube Mixes/Edits
          </h1>
         
-        <p className="md:text-2xl text-xl text-[#bd2025]">
+        {/* <p className="md:text-2xl text-xl text-[#bd2025]">
         Moji radovi
-         </p>
+         </p> */}
     
      </div>
    
