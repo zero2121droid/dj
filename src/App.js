@@ -7,6 +7,7 @@ import PrettyNavbar from './components/Navigation Components/PrettyNavbar';
 import Footer from './components/Other Components/Footer';
 import Gallery from './pages/Gallery';
 import Videos from './pages/Videos';
+import ScrollToTop from './components/Other Components/ScrollToTop';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
   
       </header> */}
       <BrowserRouter>
+      <ScrollToTop />
       {/* <Navbar /> */}
       <PrettyNavbar />
       <Routes>
