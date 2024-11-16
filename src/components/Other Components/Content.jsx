@@ -45,8 +45,8 @@ const Content = () => {
             <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold font-mono text-center">
               Dejan Jorgaćević
             </h1>
-            <div className="flex justify-center my-4">
-              <div className="divider w-full max-w-[90%] h-[2px] bg-white"></div>
+            <div className="flex justify-center mt-2 mb-4">
+              <div className="divider divider-error w-full max-w-[100%] "></div>
             </div>
             <p className="text-sm sm:text-base md:text-lg leading-relaxed font-bold text-[#bd2025] font-mono text-center sm:text-left">
               Mladi i talentovani <span className="text-white">Dejan Jorgaćević</span> DJ-ingom i produkcijom počinje da se bavi 2014. godine. Radio je u mnogim klubovima i na mnogim festivalima, sa imenima kao što su <span className="text-white">DJ Dea</span>, <span className="text-white">Igor Garnier</span>, <span className="text-white">DJ Architect</span>, <span className="text-white">Geo Da Silva</span>, <span className="text-white">Cavin Viviano</span>, <span className="text-white">Erick Kasell</span>, <span className="text-white">Divolly and Markward</span> i mnogi drugim.
