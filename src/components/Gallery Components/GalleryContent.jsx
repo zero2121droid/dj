@@ -1,21 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import GalleryImages from "./GalleryImages";
-import AnimateIn from "../Other Components/AnimateIn";
-
+import sunsetImages from "./ModelImages";
+import { safariImages } from "./ModelImages";
 
 const GalleryContent = () => {
+  const [activeTab, setActiveTab] = useState("Sunset_Fest");
+
+  // Simulated data for different categories
+  const galleryData = {
+    Sunset_Fest: sunsetImages,
+    Safari: safariImages,
+    // Test1: ["architecture1.jpg", "architecture2.jpg"],
+    // Test2: ["architecture1.jpg", "architecture2.jpg"],
+    Abstract: ["abstract1.jpg", "abstract2.jpg", "abstract3.jpg"],
+  };
+
   return (
-    <div className=" max-w-full mx-auto md:grid-rows-2 pb-8">
+    <div className="max-w-full mx-auto pb-8">
+      <div className="pb-12 max-w-[1240px] mx-auto">
+        {/* Tabs */}
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 place-items-center">
+          {Object.keys(galleryData).map((category) => (
+            <button
+              key={category}
+              className={`transition-all duration-300 ease-in-out font-bold py-5 px-10 rounded-full text-2xl ${
+                activeTab === category
+                  ? "bg-white text-[#bd2025] transform scale-105"
+                  : "bg-black text-white"
+              }`}
+              onClick={() => setActiveTab(category)}
+            >
+               {category.replace("_", " ")} {/* Replace underscore with space */}
+            </button>
+          ))}
+        </div>
 
-      <div className="pb-12 grid max-w-[1240px] mx-auto">
-  
-        
-      <GalleryImages></GalleryImages>
-
-      {/* <CoolGallery></CoolGallery> */}
+        {/* Tab Content */}
+        <div className="mt-8">
+          <GalleryImages images={galleryData[activeTab]} />
+        </div>
       </div>
-     
-   
     </div>
   );
 };

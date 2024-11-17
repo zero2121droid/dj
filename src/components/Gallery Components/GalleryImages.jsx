@@ -2,15 +2,15 @@ import React, { useState, useEffect } from "react";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import "daisyui/dist/full.css"; // Ensure DaisyUI styles are included
-import safariImages from "./ModelImages";
+// import safariImages from "./ModelImages";
 
-const GalleryImages = () => {
+const GalleryImages = ({images}) => {
   const [open, setOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [loadedImages, setLoadedImages] = useState({});
   const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(false); // Loading state
-  const imagesPerPage = 14;
+  const imagesPerPage = 50;
 
   const openLightbox = (index) => {
     setCurrentIndex(index + (currentPage - 1) * imagesPerPage);
@@ -19,7 +19,7 @@ const GalleryImages = () => {
 
   // Preload images when component mounts
   useEffect(() => {
-    safariImages.forEach((src, index) => {
+    images.forEach((src, index) => {
       const img = new Image();
       img.src = src;
       img.onload = () => setLoadedImages((prev) => ({ ...prev, [index]: true }));
@@ -29,10 +29,10 @@ const GalleryImages = () => {
   // Calculate images for the current page
   const indexOfLastImage = currentPage * imagesPerPage;
   const indexOfFirstImage = indexOfLastImage - imagesPerPage;
-  const currentImages = safariImages.slice(indexOfFirstImage, indexOfLastImage);
+  const currentImages = images.slice(indexOfFirstImage, indexOfLastImage);
 
   // Handle page change
-  const totalPages = Math.ceil(safariImages.length / imagesPerPage);
+  const totalPages = Math.ceil(images.length / imagesPerPage);
   const handlePrevPage = () => {
     if (currentPage > 1) {
       setLoading(true);
@@ -67,9 +67,9 @@ const GalleryImages = () => {
           {currentImages.map((image, index) => (
             <div key={index} className="grid gap-4">
               <div className="w-full h-64 relative">
-                {!loadedImages[index + indexOfFirstImage] && (
+                {/* {!loadedImages[index + indexOfFirstImage] && (
                   <div className="w-full h-full bg-gray-300 animate-pulse rounded-lg" />
-                )}
+                )} */}
                 <img
                   className={`w-full h-full object-cover rounded-lg cursor-pointer hover:scale-110 transition-transform duration-300 ease-in-out ${
                     loadedImages[index + indexOfFirstImage] ? "" : "hidden"
@@ -91,7 +91,7 @@ const GalleryImages = () => {
       )}
 
       {/* Pagination Controls */}
-      <div className="flex justify-center mt-4">
+      {/* <div className="flex justify-center mt-4">
         <button
           className="px-4 py-2 mx-2 bg-[#bd2025] rounded-lg hover:bg-gray-300"
           onClick={handlePrevPage}
@@ -107,11 +107,11 @@ const GalleryImages = () => {
         >
           Next
         </button>
-      </div>
+      </div> */}
 
       {open && (
         <Lightbox
-          slides={safariImages.map((src) => ({ src }))}
+          slides={images.map((src) => ({ src }))}
           open={open}
           close={() => setOpen(false)}
           index={currentIndex}
