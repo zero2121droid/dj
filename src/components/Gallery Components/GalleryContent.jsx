@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import GalleryImages from "./GalleryImages";
 import sunsetImages from "./ModelImages";
 import { safariImages } from "./ModelImages";
+import { wildFestImages } from "./ModelImages";
 
 const GalleryContent = () => {
   const [activeTab, setActiveTab] = useState("Sunset_Fest");
@@ -12,7 +13,7 @@ const GalleryContent = () => {
     Safari: safariImages,
     // Test1: ["architecture1.jpg", "architecture2.jpg"],
     // Test2: ["architecture1.jpg", "architecture2.jpg"],
-    Abstract: ["abstract1.jpg", "abstract2.jpg", "abstract3.jpg"],
+    Wild_Fest: wildFestImages,
   };
 
   return (
