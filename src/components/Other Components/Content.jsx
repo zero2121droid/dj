@@ -4,25 +4,30 @@ import video2 from "../../assets/Deki Safari 3.mp4";
 import image from "../../assets/rsz_isp_4283.jpg";
 import AnimateIn from "./AnimateIn";
 
-const Content = () => {
-  const [currentVideo, setCurrentVideo] = useState(video);
+// Custom hook for media query handling
+const useMediaQuery = (query) => {
+  const [matches, setMatches] = useState(window.matchMedia(query).matches);
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width: 640px)");
-    const handleMediaChange = (e) => {
-      setCurrentVideo(e.matches ? video2 : video);
-    };
+    const mediaQuery = window.matchMedia(query);
+    const updateMatches = (e) => setMatches(e.matches);
 
-    handleMediaChange(mediaQuery);
-    mediaQuery.addEventListener("change", handleMediaChange);
-    return () => mediaQuery.removeEventListener("change", handleMediaChange);
-  }, []);
+    mediaQuery.addEventListener("change", updateMatches);
+    return () => mediaQuery.removeEventListener("change", updateMatches);
+  }, [query]);
+
+  return matches;
+};
+
+const Content = () => {
+  const isMobile = useMediaQuery("(max-width: 640px)");
+  const currentVideo = isMobile ? video2 : video;
 
   return (
     <div id="content">
+      {/* Hero Section with Video */}
       <div className="hero">
         <video
-          key={currentVideo}
           className="w-full mx-auto"
           autoPlay
           loop
@@ -36,18 +41,17 @@ const Content = () => {
         </video>
       </div>
 
+      {/* Content Section */}
       <div
-        className="bg-black text-white min-h-screen flex flex-col items-center justify-center gap-8 bg-cover bg-center px-4 sm:px-8"
+        className="bg-black text-white min-h-screen flex flex-col items-center justify-center gap-8 bg-cover bg-center px-4 pb-10 sm:px-8"
         style={{ backgroundImage: `url(${image})` }}
       >
         <AnimateIn from="opacity-0 blur-lg" to="opacity-100 blur-none" delay={400}>
-          <div className="card mx-auto text-center w-full max-w-3xl md:max-w-5xl md:h-144 bg-black bg-opacity-70 text-gray-100 mt-12 p-4 md:p-6 rounded-lg">
-            <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold font-mono text-center">
+          <div className="card mx-auto text-center w-full max-w-5xl bg-black bg-opacity-70 text-gray-100 mt-12 p-6 rounded-lg">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold font-mono">
               Dejan Jorgaćević
             </h1>
-            <div className="flex justify-center mt-2 mb-4">
-              <div className="divider divider-error w-full max-w-[100%] "></div>
-            </div>
+            <div className="divider divider-error my-4 w-full max-w-full"></div>
             <p className="text-sm sm:text-base md:text-lg leading-relaxed font-bold text-[#bd2025] font-mono text-center sm:text-left">
               Mladi i talentovani <span className="text-white">Dejan Jorgaćević</span> DJ-ingom i produkcijom počinje da se bavi 2014. godine. Radio je u mnogim klubovima i na mnogim festivalima, sa imenima kao što su <span className="text-white">DJ Dea</span>, <span className="text-white">Igor Garnier</span>, <span className="text-white">DJ Architect</span>, <span className="text-white">Geo Da Silva</span>, <span className="text-white">Cavin Viviano</span>, <span className="text-white">Erick Kasell</span>, <span className="text-white">Divolly and Markward</span> i mnogi drugim.
               Takođe je sarađivao i sa domaćom scenom i delio stage sa imenima kao što su: <span className="text-white">Coby</span>, <span className="text-white">Mike Ride</span>, <span className="text-white">Gru</span>, <span className="text-white">Gazda Paja</span>, <span className="text-white">Sanja Vučić</span>...
@@ -62,7 +66,6 @@ const Content = () => {
             <p className="text-sm sm:text-base md:text-lg leading-relaxed font-bold text-[#bd2025] font-mono text-center sm:text-left mt-4">
               Kao jedan od vodećih DJ-eva na našim prostorima, <span className="text-white">Dejan Jorgaćević</span> nastavlja da pomera granice, kako na sceni tako i van nje, ostavljajući neizbrisiv trag na muzičkoj sceni Balkana.
             </p>
-
           </div>
         </AnimateIn>
       </div>

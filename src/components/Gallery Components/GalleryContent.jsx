@@ -43,6 +43,7 @@ const GalleryContent = () => {
         </div>
       </AnimateIn>
         {/* Tab Content */}
+
         <div className="mt-8">
           <GalleryImages images={galleryData[activeTab]} />
         </div>
