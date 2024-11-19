@@ -1,7 +1,7 @@
 import React from 'react';
 import VideoContent from '../components/Video Components/VideoContent';
 import VideoHeader from '../components/Video Components/VideoHeader';
-import image from '../assets/ISP_4290.jpg';
+import image from '../assets/rsz_isp_4290.jpg';
 import AnimateIn from '../components/Other Components/AnimateIn';
 
 const Videos = () => {

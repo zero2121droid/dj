@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import YouTube from 'react-youtube';
 
 const VideoContent = ({ videoId }) => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -8,14 +7,7 @@ const VideoContent = ({ videoId }) => {
     setIsPlaying(true);
   };
 
-  const options = {
-    playerVars: {
-      autoplay: 1,
-      controls: 1,
-      modestbranding: 1,
-      playsinline: 1,
-    },
-  };
+  const videoUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&controls=1&modestbranding=1&playsinline=1`;
 
   return (
     <div className="w-full h-64 md:h-80 lg:h-96 relative">
@@ -35,7 +27,16 @@ const VideoContent = ({ videoId }) => {
           </div>
         </div>
       ) : (
-        <YouTube videoId={videoId} opts={options} className="w-full h-full" />
+        <div className="relative pb-[56.25%] w-full h-0 overflow-hidden">
+          <iframe
+            className="absolute top-0 left-0 w-full h-full"
+            src={videoUrl}
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
       )}
     </div>
   );

@@ -3,6 +3,7 @@ import GalleryImages from "./GalleryImages";
 import sunsetImages from "./ModelImages";
 import { safariImages } from "./ModelImages";
 import { wildFestImages } from "./ModelImages";
+import AnimateIn from "../Other Components/AnimateIn";
 
 const GalleryContent = () => {
   const [activeTab, setActiveTab] = useState("Sunset_Fest");
@@ -20,6 +21,11 @@ const GalleryContent = () => {
     <div className="max-w-full mx-auto pb-8">
       <div className="pb-12 max-w-[1240px] mx-auto">
         {/* Tabs */}
+        <AnimateIn 
+          from="opacity-0 blur-lg" 
+          to="opacity-100 blur-none"
+          delay={600}
+        >
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 place-items-center">
           {Object.keys(galleryData).map((category) => (
             <button
@@ -35,7 +41,7 @@ const GalleryContent = () => {
             </button>
           ))}
         </div>
-
+      </AnimateIn>
         {/* Tab Content */}
         <div className="mt-8">
           <GalleryImages images={galleryData[activeTab]} />
