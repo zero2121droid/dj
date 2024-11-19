@@ -46,6 +46,7 @@ const GalleryImages = ({ images }) => {
               src={image}
               alt={`Gallery image ${index + 1}`}
               onClick={() => openLightbox(index)}
+              loading="lazy"
             />
           </div>
         ))}
