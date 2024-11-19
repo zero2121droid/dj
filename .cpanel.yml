@@ -1,0 +1,10 @@
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/jorgacev/dev.jorgacevicdj.com/public_html
+    - /bin/cp package-lock.json $DEPLOYPATH
+    - /bin/cp package.json $DEPLOYPATH
+    - /bin/cp postcss.config.js $DEPLOYPATH
+    - /bin/cp tailwind.config.js $DEPLOYPATH
+    - /bin/cp -R src $DEPLOYPATH
+    - /bin/cp -R public $DEPLOYPATH
+    - /bin/cp -R node_modules $DEPLOYPATH
