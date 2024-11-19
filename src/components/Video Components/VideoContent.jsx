@@ -7,7 +7,7 @@ const VideoContent = ({ videoId }) => {
     setIsPlaying(true);
   };
 
-  const videoUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&controls=1&modestbranding=1&playsinline=1`;
+  const videoUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=0&controls=1&modestbranding=1&playsinline=1`;
 
   return (
     <div className="w-full h-64 md:h-80 lg:h-96 relative">
