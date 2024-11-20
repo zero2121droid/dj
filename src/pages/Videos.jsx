@@ -24,7 +24,7 @@ const Videos = () => {
           <AnimateIn 
             from="opacity-0 -translate-x-32" 
             to="opacity-100 translate-y-0 translate-x-0"
-            delay={800}
+            delay={200}
           >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <VideoContent videoId="qL96iv_bfZo" />
@@ -34,7 +34,7 @@ const Videos = () => {
           <AnimateIn 
             from="opacity-0 translate-x-32" 
             to="opacity-100 translate-y-0 translate-x-0"
-            delay={400}
+            delay={100}
           >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <VideoContent videoId="LDsSFx2PFzw" />
@@ -44,7 +44,7 @@ const Videos = () => {
           <AnimateIn 
             from="opacity-0 -translate-x-32" 
             to="opacity-100 translate-y-0 translate-x-0"
-            delay={400}
+            delay={200}
           >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <VideoContent videoId="a1Mj0DgQIK0" />
@@ -55,7 +55,7 @@ const Videos = () => {
           <AnimateIn 
             from="opacity-0 blur-lg" 
             to="opacity-100 blur-none"
-            delay={700}
+            delay={400}
           >
           <a href='https://www.youtube.com/@JorgacevicDJ/videos' target="_blank" rel="noopener noreferrer">
           <button class="bg-white text-[#bd2025] hover:bg-black hover:text-white transition-all delay-150 ease-in-out font-bold py-5 px-32 rounded-full text-3xl">
