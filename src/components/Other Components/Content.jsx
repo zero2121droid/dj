@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import video from "../../assets/cover-video.mp4";
 import video2 from "../../assets/Deki Safari 3.mp4";
 import image from "../../assets/rsz_isp_4283.jpg";
+import imagesresized from '../../assets/resized/safari/ISP_7185JPG.jpg'
 import AnimateIn from "./AnimateIn";
 
 // Custom hook for media query handling
@@ -22,6 +23,10 @@ const useMediaQuery = (query) => {
 const Content = () => {
   const isMobile = useMediaQuery("(max-width: 640px)");
   const currentVideo = isMobile ? video2 : video;
+
+  const backgroundImage = isMobile
+  ? `url(${imagesresized})`
+  : `url(${image})`;
 
   return (
     <div id="content">
@@ -44,9 +49,9 @@ const Content = () => {
       {/* Content Section */}
       <div
         className="bg-black text-white min-h-screen flex flex-col items-center justify-center gap-8 bg-cover bg-center px-4 pb-10 sm:px-8"
-        style={{ backgroundImage: `url(${image})` }}
+        style={{ backgroundImage: backgroundImage }}
       >
-        <AnimateIn from="opacity-0 blur-lg" to="opacity-100 blur-none" delay={400}>
+        <AnimateIn from="opacity-0 blur-lg" to="opacity-100 blur-none" delay={100}>
           <div className="card mx-auto text-center w-full max-w-5xl bg-black bg-opacity-70 text-gray-100 mt-12 p-6 rounded-lg">
             <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold font-mono">
               Dejan Jorgaćević

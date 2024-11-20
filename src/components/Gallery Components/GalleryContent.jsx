@@ -26,11 +26,11 @@ const GalleryContent = () => {
           to="opacity-100 blur-none"
           delay={600}
         >
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 place-items-center">
+        <div className="grid grid-rows-3 md:grid-rows-1 md:grid-cols-3 gap-4">
           {Object.keys(galleryData).map((category) => (
             <button
               key={category}
-              className={`transition-all duration-300 ease-in-out font-bold py-5 px-10 rounded-full text-2xl ${
+              className={`transition-all duration-300 ease-in-out font-bold py-5 px-2.5 rounded-box text-2xl ${
                 activeTab === category
                   ? "bg-white text-[#bd2025] transform scale-105"
                   : "bg-black text-white"

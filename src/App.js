@@ -8,6 +8,7 @@ import Footer from './components/Other Components/Footer';
 import Gallery from './pages/Gallery';
 import Videos from './pages/Videos';
 import ScrollToTop from './components/Other Components/ScrollToTop';
+import YouTubeVisualizer from './components/Other Components/YouTubeVisualizer';
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
       <Route path="/gallery" element={<Gallery />} />
       <Route path="/videos" element={<Videos />} />
       </Routes>
+      {/* <YouTubeVisualizer videoId="qL96iv_bfZo&t=958s" /> */}
       <Footer />
       </BrowserRouter>
       

@@ -18,9 +18,9 @@ const GalleryHeader = () => {
          Pogledaj energiju uživo!
          </h1>
         
-        <p className="md:text-2xl text-xl text-[#bd2025]">
+        {/* <p className="md:text-2xl text-xl text-[#bd2025]">
         Ova galerija beleži trenutke kada muzika postaje više od zvuka, kada svaki ton donosi nove uspomene i svaki korak postaje deo ritma.
-         </p>
+         </p> */}
     
      </div>
    
