@@ -7,7 +7,7 @@ import imagesresized from '../assets/resized/safari/ISP_7185JPG.jpg'
 
 const Gallery = () => {
   return (
-    <div className='relative bg-black text-white min-h-screen flex flex-col items-center gap-8 bg-cover bg-center px-4 sm:px-8 py-10'
+    <div className='relative bg-black text-white min-h-screen flex flex-col items-center  bg-cover bg-center px-4 sm:px-8 py-10'
      style={{ backgroundImage: `url(${imagesresized})` }}
     > {/* Changed h-full to min-h-screen */}
            
