@@ -21,16 +21,11 @@ const Videos = () => {
         {/* Video Grid with Increased Gap */}
         <div className="grid grid-cols-1 gap-12 w-full mt-3 max-w-7xl">
           {/* Each pair of videos in a separate div */}
-          <AnimateIn 
-            from="opacity-0 -translate-x-32" 
-            to="opacity-100 translate-y-0 translate-x-0"
-            delay={200}
-          >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <VideoContent videoId="qL96iv_bfZo" />
             <VideoContent videoId="TNG2IKKNUDo" />
           </div>
-          </AnimateIn>
+
           <AnimateIn 
             from="opacity-0 translate-x-32" 
             to="opacity-100 translate-y-0 translate-x-0"
