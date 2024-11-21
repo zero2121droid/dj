@@ -34,6 +34,7 @@ const Content = () => {
       <div className="hero">
         <video
           className="w-full mx-auto"
+          preload="metadata"
           autoPlay
           loop
           muted
