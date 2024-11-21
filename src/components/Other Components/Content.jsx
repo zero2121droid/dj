@@ -57,18 +57,18 @@ const Content = () => {
               Dejan Jorgaćević
             </h1>
             <div className="divider divider-error my-4 w-full max-w-full"></div>
-            <p className="text-sm sm:text-base md:text-lg leading-relaxed font-bold text-[#bd2025] font-mono text-center sm:text-left">
+            <p className="text-sm sm:text-base md:text-lg leading-relaxed font-bold text-[#bd2025] font-mono text-left sm:text-left">
               Mladi i talentovani <span className="text-white">Dejan Jorgaćević</span> DJ-ingom i produkcijom počinje da se bavi 2014. godine. Radio je u mnogim klubovima i na mnogim festivalima, sa imenima kao što su <span className="text-white">DJ Dea</span>, <span className="text-white">Igor Garnier</span>, <span className="text-white">DJ Architect</span>, <span className="text-white">Geo Da Silva</span>, <span className="text-white">Cavin Viviano</span>, <span className="text-white">Erick Kasell</span>, <span className="text-white">Divolly and Markward</span> i mnogi drugim.
               Takođe je sarađivao i sa domaćom scenom i delio stage sa imenima kao što su: <span className="text-white">Coby</span>, <span className="text-white">Mike Ride</span>, <span className="text-white">Gru</span>, <span className="text-white">Gazda Paja</span>, <span className="text-white">Sanja Vučić</span>...
               <span className="text-white">Dejan Jorgaćević</span> je jedan od najtraženijih na našim prostorima. On je resident DJ u <span className="text-white">SAFARI ABC</span>. U njegovom setu se može čuti sve od komercijalne house muzike pa do balkanske trend muzike pa takođe i afro house.
             </p>
-            <p className="text-sm sm:text-base md:text-lg leading-relaxed font-bold text-[#bd2025] font-mono text-center sm:text-left mt-4">
+            <p className="text-sm sm:text-base md:text-lg leading-relaxed font-bold text-[#bd2025] font-mono text-left sm:text-left mt-4">
               Njegova energija, harizma i sposobnost da "pročita" publiku čine svaki njegov nastup nezaboravnim iskustvom. Dejan je poznat po tome što svojom muzikom stvara jedinstvenu atmosferu koja spaja ljude na plesnom podijumu. Pored DJ-inga, posvećen je i muzičkoj produkciji, gde stalno eksperimentiše sa novim zvucima i žanrovima, donoseći osveženje na domaću i regionalnu scenu.
             </p>
-            <p className="text-sm sm:text-base md:text-lg leading-relaxed font-bold text-[#bd2025] font-mono text-center sm:text-left mt-4">
+            <p className="text-sm sm:text-base md:text-lg leading-relaxed font-bold text-[#bd2025] font-mono text-left sm:text-left mt-4">
               Sa preko decenije iskustva, <span className="text-white">Dejan Jorgaćević</span> je razvio prepoznatljiv stil koji kombinuje moderne ritmove sa klasičnim elementima, omogućavajući mu da se prilagodi različitim događajima, od ekskluzivnih privatnih zabava do masovnih festivala. Njegova posvećenost muzici i ljubav prema umetnosti su inspiracija mnogima, a njegovo ime postalo je sinonim za kvalitetan provod.
             </p>
-            <p className="text-sm sm:text-base md:text-lg leading-relaxed font-bold text-[#bd2025] font-mono text-center sm:text-left mt-4">
+            <p className="text-sm sm:text-base md:text-lg leading-relaxed font-bold text-[#bd2025] font-mono text-left sm:text-left mt-4">
               Kao jedan od vodećih DJ-eva na našim prostorima, <span className="text-white">Dejan Jorgaćević</span> nastavlja da pomera granice, kako na sceni tako i van nje, ostavljajući neizbrisiv trag na muzičkoj sceni Balkana.
             </p>
           </div>

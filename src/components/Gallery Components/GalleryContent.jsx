@@ -24,7 +24,7 @@ const GalleryContent = () => {
         <AnimateIn 
           from="opacity-0 blur-lg" 
           to="opacity-100 blur-none"
-          delay={600}
+         
         >
         <div className="grid grid-rows-3 md:grid-rows-1 md:grid-cols-3 gap-4">
           {Object.keys(galleryData).map((category) => (

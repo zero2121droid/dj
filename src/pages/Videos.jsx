@@ -2,6 +2,9 @@ import React from 'react';
 import VideoContent from '../components/Video Components/VideoContent';
 import VideoHeader from '../components/Video Components/VideoHeader';
 import image from '../assets/rsz_isp_4290.jpg';
+import imageYouTube from '../assets/ISP_5671.JPG';
+import { PiYoutubeLogoBold } from 'react-icons/pi';
+import { ImYoutube2 } from "react-icons/im";
 import AnimateIn from '../components/Other Components/AnimateIn';
 
 const Videos = () => {
@@ -50,11 +53,19 @@ const Videos = () => {
           <AnimateIn 
             from="opacity-0 blur-lg" 
             to="opacity-100 blur-none"
-            delay={400}
+        
           >
           <a href='https://www.youtube.com/@JorgacevicDJ/videos' target="_blank" rel="noopener noreferrer">
-          <button class="bg-white text-[#bd2025] hover:bg-black hover:text-white transition-all delay-150 ease-in-out font-bold py-5 px-32 rounded-full text-3xl">
-            JOS VIDEA
+          <button class=" bg-neutral-900 text-white hover:bg-white hover:text-[#bd2025] transition-all delay-150 ease-in-out font-bold py-0 px-10 md:py-2 md:px-16 rounded-full text-3xl">
+          <div className='flex items-center justify-between gap-5'>
+          <ImYoutube2 className='w-24 h-24'></ImYoutube2>
+          <img
+            src={imageYouTube}
+            alt="Channel Logo"
+            className="w-16 h-16 rounded-full"
+          />
+          </div>
+         
           </button>
           </a>
           </AnimateIn>
