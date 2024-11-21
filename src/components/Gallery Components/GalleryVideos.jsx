@@ -73,7 +73,7 @@ const GalleryVideos = ({ videos }) => {
               className="w-full h-full object-cover rounded-lg"
               src={videos[currentVideoIndex]}
               controls
-           
+              loading="lazy"
               autoplay
               poster={videos[currentVideoIndex]} // Display the first frame
               onClick={() => handleVideoClick(0)} // Pause and play the clicked video
@@ -104,7 +104,7 @@ const GalleryVideos = ({ videos }) => {
                 className="w-full h-full object-cover rounded-lg cursor-pointer transition-transform duration-300 ease-in-out"
                 src={video}
                 controls
-               
+                loading="lazy"
                
                 onClick={() => {
                   // Pause all other videos when a video is clicked

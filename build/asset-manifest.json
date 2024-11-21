@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.58633635.css",
-    "main.js": "/static/js/main.b2137aee.js",
+    "main.js": "/static/js/main.104dafde.js",
     "static/js/453.51d23e97.chunk.js": "/static/js/453.51d23e97.chunk.js",
     "static/media/bella nella.mp4": "/static/media/bella nella.8ba94cdadb53df20510a.mp4",
     "static/media/cover-video.mp4": "/static/media/cover-video.2a6e49cc2cc7e058a528.mp4",
@@ -113,11 +113,11 @@
     "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/index.html",
     "main.58633635.css.map": "/static/css/main.58633635.css.map",
-    "main.b2137aee.js.map": "/static/js/main.b2137aee.js.map",
+    "main.104dafde.js.map": "/static/js/main.104dafde.js.map",
     "453.51d23e97.chunk.js.map": "/static/js/453.51d23e97.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.58633635.css",
-    "static/js/main.b2137aee.js"
+    "static/js/main.104dafde.js"
   ]
 }
