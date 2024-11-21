@@ -6,6 +6,8 @@ import { wildFestImages } from "./ModelImages";
 import { SlPicture } from "react-icons/sl";
 import { GoDeviceCameraVideo } from "react-icons/go";
 import AnimateIn from "../Other Components/AnimateIn";
+import GalleryVideos from "./GalleryVideos";
+import videoList from "./ModelVideos";
 
 const GalleryContent = () => {
   const [activeTab, setActiveTab] = useState("Sunset_Fest");
@@ -23,8 +25,25 @@ const GalleryContent = () => {
   return (
     <div className="max-w-full mx-auto pt-24 pb-8">
       <div className="pb-12 max-w-[1240px] mx-auto">
+          <div className="flex justify-center gap-4 mb-8">
+              {galleryType.map((item) => (
+                <button
+                  key={item}
+                  className={`flex items-center justify-center transition-all duration-300 ease-in-out font-bold py-3 px-6 rounded-box text-lg ${
+                    activeTab2 === item
+                      ? "bg-white text-[#bd2025] transform scale-105"
+                      : "bg-black text-white"
+                  }`}
+                  onClick={() => setActiveTab2(item)}
+                >
+                  {item === "Pics" && <SlPicture className=" text-2xl" />}
+                  {item === "Videos" && <GoDeviceCameraVideo className=" text-2xl" />}
+                </button>
+              ))}
+            </div>
         {/* Tabs */}
-        <AnimateIn from="opacity-0 blur-lg" to="opacity-100 blur-none">
+        {activeTab2 === "Pics" && 
+          <AnimateIn from="opacity-0 blur-lg" to="opacity-100 blur-none">
           <div className="grid grid-rows-3 md:grid-rows-1 md:grid-cols-3 gap-4">
             {Object.keys(galleryData).map((category) => (
               <button
@@ -42,27 +61,15 @@ const GalleryContent = () => {
           </div>
 
           {/* Second Row Buttons */}
-          <div className="flex justify-center gap-4 mt-8">
-            {galleryType.map((item) => (
-              <button
-                key={item}
-                className={`flex items-center justify-center transition-all duration-300 ease-in-out font-bold py-3 px-6 rounded-box text-lg ${
-                  activeTab2 === item
-                    ? "bg-white text-[#bd2025] transform scale-105"
-                    : "bg-black text-white"
-                }`}
-                onClick={() => setActiveTab2(item)}
-              >
-                {item === "Pics" && <SlPicture className=" text-2xl" />}
-                {item === "Videos" && <GoDeviceCameraVideo className=" text-2xl" />}
-              </button>
-            ))}
-          </div>
+        
         </AnimateIn>
+        }
+      
 
         {/* Tab Content */}
         <div className="mt-8">
-          <GalleryImages images={galleryData[activeTab]} />
+         {activeTab2 === "Pics" && <GalleryImages images={galleryData[activeTab]} /> }
+         {activeTab2 === "Videos" && <GalleryVideos videos={videoList} /> }
         </div>
       </div>
     </div>
