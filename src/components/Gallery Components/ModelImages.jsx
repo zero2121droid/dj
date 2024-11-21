@@ -32,13 +32,9 @@ import image30 from '../../assets/resized/sunset fest/ISP_6965JPG.jpg';
 //--------------------------------------------------------------------
 
 //----------------------Safari Resized -------------------------------
-import safariImage1 from '../../assets/resized/safari/DFI_6395 - Copy.jpg';
 import safariImage2 from '../../assets/resized/safari/DFI_6395.jpg';
-import safariImage3 from '../../assets/resized/safari/ISP_3887 - CopyJPG.jpg';
 import safariImage4 from '../../assets/resized/safari/ISP_3887JPG.jpg';
-import safariImage5 from '../../assets/resized/safari/ISP_3888 - CopyJPG.jpg';
 import safariImage6 from '../../assets/resized/safari/ISP_3888JPG.jpg';
-import safariImage7 from '../../assets/resized/safari/ISP_3889 - CopyJPG.jpg';
 import safariImage8 from '../../assets/resized/safari/ISP_3889JPG.jpg';
 import safariImage9 from '../../assets/resized/safari/ISP_3896JPG.jpg';
 import safariImage10 from '../../assets/resized/safari/ISP_3903JPG.jpg';
@@ -150,13 +146,13 @@ const wildFestImages = [
 export { wildFestImages };
 
 const safariImages = [
-    safariImage1,
+
     safariImage2,
-    safariImage3,
+
     safariImage4,
-    safariImage5,
+
     safariImage6,
-    safariImage7,
+
     safariImage8,
     safariImage9,
     safariImage10,
