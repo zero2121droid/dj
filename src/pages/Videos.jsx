@@ -63,6 +63,7 @@ const Videos = () => {
             src={imageYouTube}
             alt="Channel Logo"
             className="w-16 h-16 rounded-full"
+            loading="lazy"
           />
           </div>
          
