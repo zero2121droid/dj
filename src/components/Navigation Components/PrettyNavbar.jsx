@@ -78,7 +78,7 @@ const Navigation = () => {
       style={{ background, height }}
       className="fixed top-0 w-full flex items-center justify-between px-6 z-50  transition-all duration-300"
     >
-      <div className="text-white font-bold text-lg"><Link to="/"> <img src={logo} alt="Logo" className="md:ml-2  md:mt-10  mt-10" width="225" /> </Link></div>
+      <div className="text-white font-bold text-lg"><Link to="/"> <img src={logo} alt="Logo" className="md:ml-2" width="225" /> </Link></div>
       <ul className=" space-x-4 text-white font-mono hidden md:flex">
         <li><Link to="/" className="text-lg font-bold hover:underline hover:decoration-[#bd2025]">Home</Link></li>
         <li><Link to="/gallery" className="text-lg font-bold hover:underline hover:decoration-[#bd2025]">Gallery</Link></li>
@@ -90,11 +90,11 @@ const Navigation = () => {
 
         <div
           className={`${nav
-              ? "fixed left-0 top-0 w-[66%] h-full border-r border-r-gray-900 bg-[#000300] ease-in-out duration-500"
+              ? "fixed left-0 top-0 w-[66%] h-full border-r  opacity-90 border-r-gray-900 bg-[#000300] ease-in-out duration-500"
               : "fixed left-[-100%]"
             }`}
         >
-          <img src={logo} alt="Logo" className="w-28 h-32 ml-16" />
+          <img src={logo} alt="Logo" className="w-28 h-auto ml-16 mt-10 mb-3" />
           <motion.ul
             className="uppercase p-4"
             initial="hidden"

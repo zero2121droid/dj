@@ -11,7 +11,7 @@ const Gallery = () => {
      style={{ backgroundImage: `url(${imagesresized})` }}
     > {/* Changed h-full to min-h-screen */}
            
-          <GalleryHeader></GalleryHeader> {/*Centered the heading*/}
+          {/* <GalleryHeader></GalleryHeader> Centered the heading */}
       
       {/* <div className='py-16 flex justify-center items-center'>
         <div className='w-11/12 max-h-[90vh]'> 

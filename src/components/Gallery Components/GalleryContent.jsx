@@ -18,7 +18,7 @@ const GalleryContent = () => {
   };
 
   return (
-    <div className="max-w-full mx-auto pb-8">
+    <div className="max-w-full mx-auto pt-24 pb-8">
       <div className="pb-12 max-w-[1240px] mx-auto">
         {/* Tabs */}
         <AnimateIn 
