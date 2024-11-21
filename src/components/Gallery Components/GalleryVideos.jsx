@@ -74,26 +74,37 @@ const GalleryVideos = ({ videos }) => {
               src={videos[currentVideoIndex]}
               controls
               loading="lazy"
-              autoplay
               poster={videos[currentVideoIndex]} // Display the first frame
               onClick={() => handleVideoClick(0)} // Pause and play the clicked video
             />
-            <div className="absolute top-1/2 left-0 transform -translate-y-1/2 z-10">
-              <button
-                onClick={prevVideo}
-                className="text-white text-4xl px-2 py-1 bg-black bg-opacity-50 rounded-full"
-              >
-                &lt;
-              </button>
-            </div>
-            <div className="absolute top-1/2 right-0 transform -translate-y-1/2 z-10">
-              <button
-                onClick={nextVideo}
-                className="text-white text-4xl px-2 py-1 bg-black bg-opacity-50 rounded-full"
-              >
-                &gt;
-              </button>
-            </div>
+            {/* Left Navigation Button with DaisyUI styling */}
+            <button
+              onClick={prevVideo}
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-4xl p-2 bg-black bg-opacity-50 rounded-full"
+            >
+              &lt;
+            </button>
+            {/* Right Navigation Button with DaisyUI styling */}
+            <button
+              onClick={nextVideo}
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-4xl p-2 bg-black bg-opacity-50 rounded-full"
+            >
+              &gt;
+            </button>
+            {/* Play/Pause Button with DaisyUI styling */}
+            <button
+              onClick={() => {
+                const video = videoRefs.current[0];
+                if (video.paused) {
+                  video.play();
+                } else {
+                  video.pause();
+                }
+              }}
+              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-3xl p-2 bg-black bg-opacity-50 rounded-full"
+            >
+              {videoRefs.current[0]?.paused ? "►" : "❚❚"}
+            </button>
           </div>
         ) : (
           // Grid for larger screens
@@ -105,7 +116,6 @@ const GalleryVideos = ({ videos }) => {
                 src={video}
                 controls
                 loading="lazy"
-               
                 onClick={() => {
                   // Pause all other videos when a video is clicked
                   pauseAllVideos();
