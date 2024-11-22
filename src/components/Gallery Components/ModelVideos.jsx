@@ -13,7 +13,9 @@ import video11 from '../../assets/videos/Deki Safari 5.mp4';
 
 //---------------------- Videos Export -------------------------------
 const videoList = [
-
+  video9,
+  video10,
+  video11,
   video2,
   video3,
   video4,
@@ -21,9 +23,7 @@ const videoList = [
   video6,
   video7,
   video8,
-  video9,
-  video10,
-  video11,
+  
   video1,
 ];
 
