@@ -98,6 +98,88 @@ import wildFestImage40 from '../../assets/resized/wild fest/ISP_6623JPG.jpg';
 import wildFestImage41 from '../../assets/resized/wild fest/ISP_6624JPG.jpg';
 import wildFestImage42 from '../../assets/resized/wild fest/ISP_6625JPG.jpg';
 
+//---------------------- Promo Resized -------------------------------
+import promoImage1 from '../../assets/resized/promo/ISP_4240.jpg';
+import promoImage2 from '../../assets/resized/promo/ISP_4245.jpg';
+import promoImage3 from '../../assets/resized/promo/ISP_4249.jpg';
+import promoImage4 from '../../assets/resized/promo/ISP_4255.jpg';
+import promoImage5 from '../../assets/resized/promo/ISP_4259-2.jpg';
+import promoImage6 from '../../assets/resized/promo/ISP_4272.jpg';
+import promoImage7 from '../../assets/resized/promo/ISP_4277.jpg';
+import promoImage8 from '../../assets/resized/promo/ISP_4283.jpg';
+import promoImage9 from '../../assets/resized/promo/ISP_4295.jpg';
+import promoImage10 from '../../assets/resized/promo/ISP_4290.jpg';
+import promoImage11 from '../../assets/resized/promo/ISP_5658JPG.jpg';
+import promoImage12 from '../../assets/resized/promo/ISP_5661JPG.jpg';
+import promoImage13 from '../../assets/resized/promo/ISP_5664JPG.jpg';
+import promoImage14 from '../../assets/resized/promo/ISP_5665JPG.jpg';
+import promoImage15 from '../../assets/resized/promo/ISP_5668JPG.jpg';
+import promoImage16 from '../../assets/resized/promo/ISP_5669JPG.jpg';
+import promoImage17 from '../../assets/resized/promo/ISP_5670JPG.jpg';
+import promoImage18 from '../../assets/resized/promo/ISP_5671JPG.jpg';
+import promoImage19 from '../../assets/resized/promo/ISP_5673JPG.jpg';
+import promoImage20 from '../../assets/resized/promo/ISP_5674JPG.jpg';
+import promoImage21 from '../../assets/resized/promo/ISP_5676JPG.jpg';
+import promoImage22 from '../../assets/resized/promo/ISP_5678JPG.jpg';
+import promoImage23 from '../../assets/resized/promo/ISP_5683JPG.jpg';
+import promoImage24 from '../../assets/resized/promo/ISP_5690JPG.jpg';
+import promoImage25 from '../../assets/resized/promo/ISP_9316.jpg';
+import promoImage26 from '../../assets/resized/promo/ISP_9317.jpg';
+import promoImage27 from '../../assets/resized/promo/ISP_9320.jpg';
+import promoImage28 from '../../assets/resized/promo/ISP_9322.jpg';
+import promoImage29 from '../../assets/resized/promo/ISP_9323.jpg';
+import promoImage30 from '../../assets/resized/promo/ISP_9345.jpg';
+import promoImage31 from '../../assets/resized/promo/ISP_9347.jpg';
+import promoImage32 from '../../assets/resized/promo/ISP_9348.jpg';
+import promoImage33 from '../../assets/resized/promo/ISP_9357.jpg';
+import promoImage34 from '../../assets/resized/promo/ISP_9360.jpg';
+import promoImage35 from '../../assets/resized/promo/ISP_9366.jpg';
+import promoImage36 from '../../assets/resized/promo/ISP_9370.jpg';
+//--------------------------------------------------------------------
+
+
+
+const promo = [
+    promoImage1,
+    promoImage2,
+    promoImage3,
+    promoImage4,
+    promoImage5,
+    promoImage6,
+    promoImage7,
+    promoImage8,
+    promoImage9,
+    promoImage10,
+    promoImage11,
+    promoImage12,
+    promoImage13,
+    promoImage14,
+    promoImage15,
+    promoImage16,
+    promoImage17,
+    promoImage18,
+    promoImage19,
+    promoImage20,
+    promoImage21,
+    promoImage22,
+    promoImage23,
+    promoImage24,
+    promoImage25,
+    promoImage26,
+    promoImage27,
+    promoImage28,
+    promoImage29,
+    promoImage30,
+    promoImage31,
+    promoImage32,
+    promoImage33,
+    promoImage34,
+    promoImage35,
+    promoImage36,
+  ];
+  
+  export { promo };
+
 const wildFestImages = [
     wildFestImage1,
     wildFestImage2,
