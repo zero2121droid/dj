@@ -69,7 +69,7 @@ const GalleryContent = () => {
         {/* Category Buttons */}
         {activeTab2 === "Pics" && (
           <AnimateIn from="opacity-0 blur-lg" to="opacity-100 blur-none">
-            <div className="grid grid-rows-3 md:grid-rows-1 md:grid-cols-3 gap-4">
+            <div className="grid grid-rows-3 md:grid-rows-1 md:grid-cols-4 gap-4">
               {Object.keys(galleryData).map((category) => (
                 <button
                   key={category}
