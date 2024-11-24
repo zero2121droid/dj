@@ -191,6 +191,7 @@ const Content = () => {
               name="name"
               placeholder="Unesite ime ovde"
               className="input input-bordered w-full"
+              required
             />
           </div>
           <div className="form-control mb-4">
@@ -203,6 +204,7 @@ const Content = () => {
               name="email"
               placeholder="Unesite Email ovde"
               className="input input-bordered w-full"
+              required
             />
           </div>
           <div className="form-control mb-4">
@@ -215,6 +217,7 @@ const Content = () => {
               name="message"
               placeholder="Napišite poruku ovde"
               className="textarea textarea-bordered w-full"
+              required
             />
           </div>
           <button type="submit" className="bg-[#bd2025] px-3 py-3 rounded-lg w-full">
