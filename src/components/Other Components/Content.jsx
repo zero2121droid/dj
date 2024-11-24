@@ -1,9 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import video from "../../assets/cover-video.mp4";
 import video2 from "../../assets/Deki Safari 3.mp4";
 import image from "../../assets/rsz_isp_4283.jpg";
 import imagesresized from '../../assets/resized/safari/ISP_7237JPG.jpg'
+import Toast from '../Other Components/Toast';
+import emailjs from 'emailjs-com';
+import promoimage from '../../assets/resized/promo/ISP_4277.jpg'
 import AnimateIn from "./AnimateIn";
+import { FaEnvelope, FaInstagram, FaTiktok } from 'react-icons/fa';
 
 // Custom hook for media query handling
 const useMediaQuery = (query) => {
@@ -20,7 +24,44 @@ const useMediaQuery = (query) => {
   return matches;
 };
 
+
+
 const Content = () => {
+  
+  const [showToast, setShowToast] = useState(false);
+
+  const handleSendMessage = () => {
+    // Simulate a successful action
+    setShowToast(true);
+    setTimeout(() => setShowToast(false), 3000); // Hide after 3 seconds
+  };
+
+  const [count, setCount] = useState(0);
+
+  const form = useRef();
+
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm(
+      'service_9d0y8dw',  // Service ID from EmailJS
+      'template_rwgg14t', // Template ID from EmailJS
+      form.current,
+      '5PBfDkeFBYXq3Po_j'      // User ID from EmailJS
+    )
+    .then((result) => {
+        console.log(result.text);
+        // alert("Message sent successfully!");
+        handleSendMessage()
+    }, (error) => {
+        console.log(error.text);
+        alert("An error occurred, please try again.");
+    });
+
+    e.target.reset();
+  };
+
   const isMobile = useMediaQuery("(max-width: 640px)");
   const currentVideo = isMobile ? video2 : video;
 
@@ -75,6 +116,124 @@ const Content = () => {
           </div>
         </AnimateIn>
       </div>
+   {/* Third Section */}
+   <div className="bg-black text-white min-h-screen flex flex-col items-center justify-center gap-8 px-4 py-10">
+  {/* First Row with Two Columns */}
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-7xl">
+  <div className="flex flex-col md:flex-row bg-neutral-900 text-white p-6 rounded-lg shadow-lg md:items-center md:space-x-6 max-w-3xl mx-auto">
+  {/* Image Section */}
+  <div className="w-full md:w-full">
+    <img
+      src={promoimage}
+      alt="Card image"
+      className="w-full h-auto object-cover rounded-lg"
+    />
+  </div>
+
+  {/* Divider */}
+  {/* <div className="border-l-2 border-gray-600 h-auto"></div> */}
+
+  {/* Contact Information */}
+  <div className="w-full md:w-1/2 mt-6 md:mt-0">
+    <ul className="text-gray-400 space-y-4">
+      {/* Email */}
+      <li className="flex items-center">
+        <FaEnvelope className="text-[#bd2025] mr-4 text-xl" />
+        <a
+          href="mailto:djdekli996@gmail.com"
+          className="hover:text-[#bd2025] break-words"
+        >
+          <span className="font-bold">djdekli996@gmail.com</span>
+        </a>
+      </li>
+
+      {/* Instagram */}
+      <li className="flex items-center">
+        <FaInstagram className="text-[#bd2025] mr-4 text-xl" />
+        <a
+          href="https://instagram.com/jorgacevicdj"
+          className="hover:text-[#bd2025]"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span className="font-bold">@jorgacevicdj</span>
+        </a>
+      </li>
+
+      {/* TikTok */}
+      <li className="flex items-center">
+        <FaTiktok className="text-[#bd2025] mr-4 text-xl" />
+        <a
+          href="https://tiktok.com/@jorgacevicdj"
+          className="hover:text-[#bd2025]"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span className="font-bold">@jorgacevicdj</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+    {/* Second Card with Contact Form */}
+    <div className="card w-full max-w-3xl bg-neutral-900 shadow-xl">
+      <div className="card-body">
+        <h2 className="card-title text-center">Ostavite poruku</h2>
+        <form className="form-control" ref={form} onSubmit={sendEmail}>
+          <div className="form-control mb-4">
+            <label className="label" htmlFor="name">
+              <span className="label-text text-white">Ime</span>
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Unesite ime ovde"
+              className="input input-bordered w-full"
+            />
+          </div>
+          <div className="form-control mb-4">
+            <label className="label" htmlFor="email">
+              <span className="label-text text-white">Email</span>
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Unesite Email ovde"
+              className="input input-bordered w-full"
+            />
+          </div>
+          <div className="form-control mb-4">
+            <label className="label" htmlFor="message">
+              <span className="label-text text-white">Poruka</span>
+            </label>
+            <textarea
+              id="message"
+              rows="4"
+              name="message"
+              placeholder="Napišite poruku ovde"
+              className="textarea textarea-bordered w-full"
+            />
+          </div>
+          <button type="submit" className="bg-[#bd2025] px-3 py-3 rounded-lg w-full">
+            Pošalji poruku
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  {showToast && (
+    <Toast
+      message="Poruka je poslata!"
+      onClose={() => setShowToast(false)}
+    />
+  )}
+</div>
+
+
     </div>
   );
 };

@@ -78,17 +78,17 @@ const GalleryImages = ({ images }) => {
 
       <div className="flex justify-between items-center mt-8">
         <button
-          className="rounded-lg py-1 px-2 bg-[#bd2025] text-white"
+          className="rounded-lg py-1 px-2 bg-[#bd2025] text-white font-bold"
           onClick={handlePreviousPage}
           disabled={currentPage === 1}
         >
           Prethodna
         </button>
-        <span className="text-white">
+        <span className="text-white font-bold">
           Strana {currentPage} od {totalPages}
         </span>
         <button
-          className="rounded-lg py-1 px-2 bg-[#bd2025] text-white"
+          className="rounded-lg py-1 px-2 bg-[#bd2025] text-white font-bold"
           onClick={handleNextPage}
           disabled={currentPage === totalPages}
         >
