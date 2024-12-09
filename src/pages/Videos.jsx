@@ -25,7 +25,7 @@ const Videos = () => {
         <div className="grid grid-cols-1 gap-12 w-full mt-3 max-w-7xl">
           {/* Each pair of videos in a separate div */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <VideoContent videoId="qL96iv_bfZo" />
+            <VideoContent videoId="TuTGLNFvLvM" />
             <VideoContent videoId="TNG2IKKNUDo" />
           </div>
 
@@ -35,7 +35,7 @@ const Videos = () => {
             delay={100}
           >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <VideoContent videoId="LDsSFx2PFzw" />
+            <VideoContent videoId="qL96iv_bfZo" />
             <VideoContent videoId="RQkUln0mpz0" />
           </div>
           </AnimateIn>
@@ -46,7 +46,7 @@ const Videos = () => {
           >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <VideoContent videoId="a1Mj0DgQIK0" />
-            <VideoContent videoId="K-OQLXAil_s" />
+            <VideoContent videoId="LDsSFx2PFzw" />
           </div>
           </AnimateIn>
           <div>
