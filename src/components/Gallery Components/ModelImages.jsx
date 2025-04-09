@@ -135,11 +135,59 @@ import promoImage33 from '../../assets/resized/promo/ISP_9357.jpg';
 import promoImage34 from '../../assets/resized/promo/ISP_9360.jpg';
 import promoImage35 from '../../assets/resized/promo/ISP_9366.jpg';
 import promoImage36 from '../../assets/resized/promo/ISP_9370.jpg';
+
+// Nove Dekijeve slike 09.04.2025
+import promoImage37 from '../../assets/resized/promo/Deki Anime.jpg';
+import promoImage38 from '../../assets/resized/promo/ISP_3286.jpg';
+import promoImage39 from '../../assets/resized/promo/ISP_3288.jpg';
+import promoImage40 from '../../assets/resized/promo/ISP_3290.jpg';
+import promoImage41 from '../../assets/resized/promo/ISP_3291.jpg';
+import promoImage42 from '../../assets/resized/promo/ISP_3293.jpg';
+import promoImage43 from '../../assets/resized/promo/ISP_3300 3.jpg';
+import promoImage44 from '../../assets/resized/promo/ISP_3310.jpg';
+import promoImage45 from '../../assets/resized/promo/ISP_3312.jpg';
+import promoImage46 from '../../assets/resized/promo/ISP_3319.jpg';
+import promoImage47 from '../../assets/resized/promo/ISP_3324.jpg';
+import promoImage48 from '../../assets/resized/promo/ISP_3326.jpg';
+import promoImage49 from '../../assets/resized/promo/ISP_3335.jpg';
+import promoImage50 from '../../assets/resized/promo/ISP_3337.jpg';
+import promoImage51 from '../../assets/resized/promo/ISP_3339.jpg';
+import promoImage52 from '../../assets/resized/promo/ISP_3340.jpg';
+import promoImage53 from '../../assets/resized/promo/ISP_3341.jpg';
+import promoImage54 from '../../assets/resized/promo/ISP_3357.jpg';
+import promoImage55 from '../../assets/resized/promo/ISP_3363.jpg';
+import promoImage56 from '../../assets/resized/promo/ISP_3365.jpg';
+import promoImage57 from '../../assets/resized/promo/ISP_3370.jpg';
+import promoImage58 from '../../assets/resized/promo/ISP_3374.jpg';
+import promoImage59 from '../../assets/resized/promo/ISP_3375.jpg';
 //--------------------------------------------------------------------
 
 
 
 const promo = [
+    promoImage37,
+    promoImage38,
+    promoImage39,
+    promoImage40,
+    promoImage41,
+    promoImage42,
+    promoImage43,
+    promoImage44,
+    promoImage45,
+    promoImage46,
+    promoImage47,
+    promoImage48,
+    promoImage49,
+    promoImage50,
+    promoImage51,
+    promoImage52,
+    promoImage53,
+    promoImage54,
+    promoImage55,
+    promoImage56,
+    promoImage57,
+    promoImage58,
+    promoImage59, 
     promoImage1,
     promoImage2,
     promoImage3,
