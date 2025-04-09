@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.0dd318de.css",
-    "main.js": "/static/js/main.da1f2e21.js",
+    "main.css": "/static/css/main.82d75029.css",
+    "main.js": "/static/js/main.51d42074.js",
     "reactPlayerYouTube.js": "/static/js/reactPlayerYouTube.21b409a4.chunk.js",
     "reactPlayerSoundCloud.js": "/static/js/reactPlayerSoundCloud.9e247f71.chunk.js",
     "reactPlayerVimeo.js": "/static/js/reactPlayerVimeo.8d695f14.chunk.js",
@@ -93,7 +93,6 @@
     "static/media/ISP_6578JPG.jpg": "/static/media/ISP_6578JPG.b86a2051b03e6e3f5d09.jpg",
     "static/media/ISP_5664JPG.jpg": "/static/media/ISP_5664JPG.a19f8f871459509b26f2.jpg",
     "static/media/ISP_6531JPG.jpg": "/static/media/ISP_6531JPG.572bf617d80c2e52134f.jpg",
-    "static/media/rsz_isp_4283.jpg": "/static/media/rsz_isp_4283.6187a200f9211d5ad0b7.jpg",
     "static/media/ISP_6577JPG.jpg": "/static/media/ISP_6577JPG.c18de2398102b1abe348.jpg",
     "static/media/ISP_4277.jpg": "/static/media/ISP_4277.34107c2555ab3b279021.jpg",
     "static/media/ISP_5678JPG.jpg": "/static/media/ISP_5678JPG.699a3452951cb1a09668.jpg",
@@ -184,8 +183,8 @@
     "static/media/Deki Anime.jpg": "/static/media/Deki Anime.7177e15613e6b957b882.jpg",
     "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/index.html",
-    "main.0dd318de.css.map": "/static/css/main.0dd318de.css.map",
-    "main.da1f2e21.js.map": "/static/js/main.da1f2e21.js.map",
+    "main.82d75029.css.map": "/static/css/main.82d75029.css.map",
+    "main.51d42074.js.map": "/static/js/main.51d42074.js.map",
     "reactPlayerYouTube.21b409a4.chunk.js.map": "/static/js/reactPlayerYouTube.21b409a4.chunk.js.map",
     "reactPlayerSoundCloud.9e247f71.chunk.js.map": "/static/js/reactPlayerSoundCloud.9e247f71.chunk.js.map",
     "reactPlayerVimeo.8d695f14.chunk.js.map": "/static/js/reactPlayerVimeo.8d695f14.chunk.js.map",
@@ -203,7 +202,7 @@
     "453.51d23e97.chunk.js.map": "/static/js/453.51d23e97.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0dd318de.css",
-    "static/js/main.da1f2e21.js"
+    "static/css/main.82d75029.css",
+    "static/js/main.51d42074.js"
   ]
 }

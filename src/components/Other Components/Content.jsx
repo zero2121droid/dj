@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import video from "../../assets/cover-video.mp4";
 import video2 from "../../assets/Deki Safari 3.mp4";
-import image from "../../assets/rsz_isp_4283.jpg";
+import image from "../../assets/resized/promo/ISP_3339.jpg";
 import imagesresized from '../../assets/resized/safari/ISP_7237JPG.jpg'
 import Toast from '../Other Components/Toast';
 import emailjs from 'emailjs-com';
@@ -90,7 +90,7 @@ const Content = () => {
 
       {/* Content Section */}
       <div
-        className="bg-black text-white min-h-screen flex flex-col items-center justify-center gap-8 bg-cover bg-center px-4 pb-10 sm:px-8"
+        className="bg-black text-white min-h-screen flex flex-col items-center justify-center gap-8 bg-cover bg-center px-4 pb-10 sm:px-8 sm:py-20"
         style={{ backgroundImage: backgroundImage }}
       >
         <AnimateIn from="opacity-0 blur-lg" to="opacity-100 blur-none" delay={100}>
