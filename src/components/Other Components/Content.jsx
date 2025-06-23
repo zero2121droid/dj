@@ -11,6 +11,7 @@ import promoimage from '../../assets/resized/promo/ISP_4277.jpg'
 import AnimateIn from "./AnimateIn";
 import { FaEnvelope, FaInstagram, FaTiktok } from 'react-icons/fa';
 
+
 // Custom hook for media query handling
 const useMediaQuery = (query) => {
   const [matches, setMatches] = useState(window.matchMedia(query).matches);
