@@ -162,7 +162,104 @@ import promoImage58 from '../../assets/resized/promo/ISP_3374.jpg';
 import promoImage59 from '../../assets/resized/promo/ISP_3375.jpg';
 //--------------------------------------------------------------------
 
+//La Casa slike part 1
+import lacasaImage1 from '../../assets/resized/la casa/part 1/ISP_4013.jpg';
+import lacasaImage2 from '../../assets/resized/la casa/part 1/ISP_4031.jpg';
+import lacasaImage3 from '../../assets/resized/la casa/part 1/ISP_4052.jpg';
+import lacasaImage4 from '../../assets/resized/la casa/part 1/ISP_4133.jpg';
+import lacasaImage5 from '../../assets/resized/la casa/part 1/ISP_4156.jpg';
+import lacasaImage6 from '../../assets/resized/la casa/part 1/ISP_4160.jpg';
+import lacasaImage7 from '../../assets/resized/la casa/part 1/ISP_4288.jpg';
+import lacasaImage8 from '../../assets/resized/la casa/part 1/ISP_4295.jpg';
 
+//La Casa slike part 2
+import lacasaImage9 from '../../assets/resized/la casa/part 2/ISP_5667.jpg';
+import lacasaImage10 from '../../assets/resized/la casa/part 2/ISP_5668.jpg';
+import lacasaImage11 from '../../assets/resized/la casa/part 2/ISP_5673.jpg';
+import lacasaImage12 from '../../assets/resized/la casa/part 2/ISP_5675.jpg';
+import lacasaImage13 from '../../assets/resized/la casa/part 2/ISP_5692.jpg';
+import lacasaImage14 from '../../assets/resized/la casa/part 2/ISP_5695.jpg';
+import lacasaImage15 from '../../assets/resized/la casa/part 2/ISP_5702.jpg';
+import lacasaImage16 from '../../assets/resized/la casa/part 2/ISP_5709.jpg';
+import lacasaImage17 from '../../assets/resized/la casa/part 2/ISP_5725.jpg';
+import lacasaImage18 from '../../assets/resized/la casa/part 2/ISP_5727.jpg';
+import lacasaImage19 from '../../assets/resized/la casa/part 2/ISP_5743.jpg';
+import lacasaImage20 from '../../assets/resized/la casa/part 2/ISP_5745.jpg';
+import lacasaImage21 from '../../assets/resized/la casa/part 2/ISP_5746.jpg';
+import lacasaImage22 from '../../assets/resized/la casa/part 2/ISP_5748.jpg';
+import lacasaImage23 from '../../assets/resized/la casa/part 2/ISP_5777.jpg';
+import lacasaImage24 from '../../assets/resized/la casa/part 2/ISP_5825.jpg';
+import lacasaImage25 from '../../assets/resized/la casa/part 2/ISP_5932.jpg';
+import lacasaImage26 from '../../assets/resized/la casa/part 2/ISP_6141.jpg';
+import lacasaImage27 from '../../assets/resized/la casa/part 2/ISP_6142.jpg';
+import lacasaImage28 from '../../assets/resized/la casa/part 2/ISP_6155.jpg';
+
+// La Casa slike part 3
+import lacasaImage29 from '../../assets/resized/la casa/part 3/ISP_006.jpg';
+import lacasaImage30 from '../../assets/resized/la casa/part 3/ISP_007.jpg';
+import lacasaImage31 from '../../assets/resized/la casa/part 3/ISP_008.jpg';
+import lacasaImage32 from '../../assets/resized/la casa/part 3/ISP_009.jpg';
+import lacasaImage33 from '../../assets/resized/la casa/part 3/ISP_010.jpg';
+import lacasaImage34 from '../../assets/resized/la casa/part 3/ISP_011.jpg';
+import lacasaImage35 from '../../assets/resized/la casa/part 3/ISP_012.jpg';
+import lacasaImage36 from '../../assets/resized/la casa/part 3/ISP_013.jpg';
+import lacasaImage37 from '../../assets/resized/la casa/part 3/ISP_014.jpg';
+import lacasaImage38 from '../../assets/resized/la casa/part 3/ISP_015.jpg';
+import lacasaImage39 from '../../assets/resized/la casa/part 3/ISP_016.jpg';
+import lacasaImage40 from '../../assets/resized/la casa/part 3/ISP_043.jpg';
+import lacasaImage41 from '../../assets/resized/la casa/part 3/ISP_068.jpg';
+import lacasaImage42 from '../../assets/resized/la casa/part 3/ISP_132.jpg';
+import lacasaImage43 from '../../assets/resized/la casa/part 3/ISP_148.jpg';
+import lacasaImage44 from '../../assets/resized/la casa/part 3/ISP_149.jpg';
+
+const laCasa  = [
+    lacasaImage1,
+    lacasaImage2,
+    lacasaImage3,
+    lacasaImage4,
+    lacasaImage5,
+    lacasaImage6,
+    lacasaImage7,
+    lacasaImage8,
+    lacasaImage9,
+    lacasaImage10,
+    lacasaImage11,
+    lacasaImage12,
+    lacasaImage13,
+    lacasaImage14,
+    lacasaImage15,
+    lacasaImage16,
+    lacasaImage17,
+    lacasaImage18,
+    lacasaImage19,
+    lacasaImage20,
+    lacasaImage21,
+    lacasaImage22,
+    lacasaImage23,
+    lacasaImage24,
+    lacasaImage25,
+    lacasaImage26,
+    lacasaImage27,
+    lacasaImage28,
+    lacasaImage29,
+    lacasaImage30,
+    lacasaImage31,
+    lacasaImage32,
+    lacasaImage33,
+    lacasaImage34,
+    lacasaImage35,
+    lacasaImage36,
+    lacasaImage37,
+    lacasaImage38,
+    lacasaImage39,
+    lacasaImage40,
+    lacasaImage41,
+    lacasaImage42,
+    lacasaImage43,
+    lacasaImage44,
+];
+
+  export { laCasa };
 
 const promo = [
     promoImage37,

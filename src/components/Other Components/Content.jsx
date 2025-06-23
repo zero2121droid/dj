@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
-import video from "../../assets/cover-video.mp4";
-import video2 from "../../assets/Deki Safari 3.mp4";
+// import video from "../../assets/cover-video.mp4";
+import video from "../../assets/Landscape La CASA.mp4";
+
+import video2 from "../../assets/deki la casa-2.mp4";
 import image from "../../assets/resized/promo/ISP_3339.jpg";
 import imagesresized from '../../assets/resized/safari/ISP_7237JPG.jpg'
 import Toast from '../Other Components/Toast';
