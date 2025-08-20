@@ -212,7 +212,103 @@ import lacasaImage42 from '../../assets/resized/la casa/part 3/ISP_132.jpg';
 import lacasaImage43 from '../../assets/resized/la casa/part 3/ISP_148.jpg';
 import lacasaImage44 from '../../assets/resized/la casa/part 3/ISP_149.jpg';
 
+// La Casa slike part 4
+import lacasaImage45 from '../../assets/resized/la casa/part 4/ISP_0103.jpg';
+import lacasaImage46 from '../../assets/resized/la casa/part 4/ISP_0105.jpg';
+import lacasaImage78 from '../../assets/resized/la casa/part 4/ISP_0108.jpg';
+import lacasaImage47 from '../../assets/resized/la casa/part 4/ISP_0304.jpg';
+import lacasaImage48 from '../../assets/resized/la casa/part 4/ISP_0315.jpg';
+import lacasaImage49 from '../../assets/resized/la casa/part 4/ISP_0316.jpg';
+import lacasaImage50 from '../../assets/resized/la casa/part 4/ISP_0321.jpg';
+import lacasaImage51 from '../../assets/resized/la casa/part 4/ISP_0324.jpg';
+import lacasaImage52 from '../../assets/resized/la casa/part 4/ISP_0327.jpg';
+import lacasaImage53 from '../../assets/resized/la casa/part 4/ISP_0330.jpg';
+import lacasaImage54 from '../../assets/resized/la casa/part 4/ISP_0332.jpg';
+import lacasaImage55 from '../../assets/resized/la casa/part 4/ISP_0343.jpg';
+import lacasaImage56 from '../../assets/resized/la casa/part 4/ISP_0353.jpg';
+import lacasaImage57 from '../../assets/resized/la casa/part 4/ISP_0361.jpg';
+import lacasaImage58 from '../../assets/resized/la casa/part 4/ISP_0421.jpg';
+import lacasaImage59 from '../../assets/resized/la casa/part 4/ISP_0424.jpg';
+import lacasaImage60 from '../../assets/resized/la casa/part 4/ISP_0455.jpg';
+import lacasaImage61 from '../../assets/resized/la casa/part 4/ISP_0718.jpg';
+import lacasaImage62 from '../../assets/resized/la casa/part 4/ISP_0723.jpg';
+import lacasaImage63 from '../../assets/resized/la casa/part 4/ISP_0725.jpg';
+import lacasaImage64 from '../../assets/resized/la casa/part 4/ISP_0821.jpg';
+import lacasaImage65 from '../../assets/resized/la casa/part 4/ISP_0832.jpg';
+import lacasaImage66 from '../../assets/resized/la casa/part 4/ISP_0835.jpg';
+import lacasaImage67 from '../../assets/resized/la casa/part 4/ISP_0841.jpg';
+import lacasaImage68 from '../../assets/resized/la casa/part 4/ISP_0842.jpg';
+import lacasaImage69 from '../../assets/resized/la casa/part 4/ISP_0846.jpg';
+import lacasaImage70 from '../../assets/resized/la casa/part 4/ISP_0853.jpg';
+import lacasaImage71 from '../../assets/resized/la casa/part 4/ISP_0856.jpg';
+import lacasaImage72 from '../../assets/resized/la casa/part 4/ISP_0858.jpg';
+import lacasaImage73 from '../../assets/resized/la casa/part 4/ISP_0865.jpg';
+import lacasaImage74 from '../../assets/resized/la casa/part 4/ISP_0866.jpg';
+import lacasaImage75 from '../../assets/resized/la casa/part 4/ISP_0908.jpg';
+import lacasaImage76 from '../../assets/resized/la casa/part 4/ISP_1277.jpg';
+import lacasaImage77 from '../../assets/resized/la casa/part 4/ISP_1512.jpg';
+
+
+//Wildness Fest 2025
+import wildnessImage1 from '../../assets/resized/wildness 2025/IMG_0585.jpg';
+import wildnessImage2 from '../../assets/resized/wildness 2025/IMG_1005.jpg';
+import wildnessImage3 from '../../assets/resized/wildness 2025/IMG_4212JPG.jpg';
+import wildnessImage4 from '../../assets/resized/wildness 2025/IMG_4216JPG.jpg';
+import wildnessImage5 from '../../assets/resized/wildness 2025/IMG_4220JPG.jpg';
+import wildnessImage6 from '../../assets/resized/wildness 2025/IMG_4222JPG.jpg';
+import wildnessImage7 from '../../assets/resized/wildness 2025/IMG_4223JPG.jpg';
+import wildnessImage8 from '../../assets/resized/wildness 2025/IMG_4224JPG.jpg';
+import wildnessImage9 from '../../assets/resized/wildness 2025/IMG_4225JPG.jpg';
+import wildnessImage10 from '../../assets/resized/wildness 2025/IMG_4226JPG.jpg';
+import wildnessImage11 from '../../assets/resized/wildness 2025/IMG_4228JPG.jpg';
+import wildnessImage12 from '../../assets/resized/wildness 2025/IMG_4230JPG.jpg';
+import wildnessImage13 from '../../assets/resized/wildness 2025/IMG_4233JPG.jpg';
+import wildnessImage14 from '../../assets/resized/wildness 2025/ISP_0019.jpg';
+import wildnessImage15 from '../../assets/resized/wildness 2025/ISP_0043.jpg';
+import wildnessImage16 from '../../assets/resized/wildness 2025/ISP_0079.jpg';
+import wildnessImage17 from '../../assets/resized/wildness 2025/ISP_0103.jpg';
+import wildnessImage18 from '../../assets/resized/wildness 2025/ISP_0105.jpg';
+import wildnessImage19 from '../../assets/resized/wildness 2025/ISP_0115.jpg';
+import wildnessImage20 from '../../assets/resized/wildness 2025/ISP_0141.jpg';
+import wildnessImage21 from '../../assets/resized/wildness 2025/ISP_0146.jpg';
+import wildnessImage22 from '../../assets/resized/wildness 2025/ISP_0679.jpg';
+import wildnessImage23 from '../../assets/resized/wildness 2025/ISP_0707.jpg';
+
 const laCasa  = [
+      lacasaImage45,
+    lacasaImage46,
+    lacasaImage78,
+    lacasaImage47,
+    lacasaImage48,
+    lacasaImage49,
+    lacasaImage50,
+    lacasaImage51,
+    lacasaImage52,
+    lacasaImage53,
+    lacasaImage54,
+    lacasaImage55,
+    lacasaImage56,
+    lacasaImage57,
+    lacasaImage58,
+    lacasaImage59,
+    lacasaImage60,
+    lacasaImage61,
+    lacasaImage62,
+    lacasaImage63,
+    lacasaImage64,
+    lacasaImage65,
+    lacasaImage66,
+    lacasaImage67,
+    lacasaImage68,
+    lacasaImage69,
+    lacasaImage70,
+    lacasaImage71,
+    lacasaImage72,
+    lacasaImage73,
+    lacasaImage74,
+    lacasaImage75,
+    lacasaImage76,
+    lacasaImage77,
     lacasaImage1,
     lacasaImage2,
     lacasaImage3,
@@ -257,6 +353,8 @@ const laCasa  = [
     lacasaImage42,
     lacasaImage43,
     lacasaImage44,
+    // Part 4
+  
 ];
 
   export { laCasa };
@@ -401,6 +499,36 @@ const safariImages = [
 
 export { safariImages };
 //--------------------------------------------------------------------
+
+
+//---------------------- Wildness Fest 2025 Export ------------------------
+const wildnessFest2025 = [
+    wildnessImage1,
+    wildnessImage2,
+    wildnessImage3,
+    wildnessImage4,
+    wildnessImage5,
+    wildnessImage6,
+    wildnessImage7,
+    wildnessImage8,
+    wildnessImage9,
+    wildnessImage10,
+    wildnessImage11,
+    wildnessImage12,
+    wildnessImage13,
+    wildnessImage14,
+    wildnessImage15,
+    wildnessImage16,
+    wildnessImage17,
+    wildnessImage18,
+    wildnessImage19,
+    wildnessImage20,
+    wildnessImage21,
+    wildnessImage22,
+    wildnessImage23
+];
+export { wildnessFest2025 };
+
 
 //---------------------- Sunset Images Export ------------------------
 const sunsetImages = [

@@ -5,6 +5,7 @@ import { safariImages } from "./ModelImages";
 import { wildFestImages } from "./ModelImages";
 import { promo } from "./ModelImages";
 import { laCasa } from "./ModelImages";
+import { wildnessFest2025 } from "./ModelImages";
 import { SlPicture } from "react-icons/sl";
 import { GoDeviceCameraVideo } from "react-icons/go";
 import { FaArrowUp } from "react-icons/fa";
@@ -23,7 +24,9 @@ const GalleryContent = () => {
     Promo: promo,
     Sunset_Fest: sunsetImages,
     ABC_Safari: safariImages,
+    Wildness_Fest_2025: wildnessFest2025,
     Wildness_Fest: wildFestImages,
+
   };
 
   const galleryType = ["Pics", "Videos"];
@@ -55,11 +58,10 @@ const GalleryContent = () => {
           {galleryType.map((item) => (
             <button
               key={item}
-              className={`flex items-center justify-center transition-all duration-300 ease-in-out font-bold py-3 px-6 rounded-box text-lg ${
-                activeTab2 === item
+              className={`flex items-center justify-center transition-all duration-300 ease-in-out font-bold py-3 px-6 rounded-box text-lg ${activeTab2 === item
                   ? "bg-white text-[#bd2025] transform scale-105"
                   : "bg-black text-white"
-              }`}
+                }`}
               onClick={() => setActiveTab2(item)}
             >
               {item === "Pics" && <SlPicture className="text-2xl" />}
@@ -75,14 +77,13 @@ const GalleryContent = () => {
               {Object.keys(galleryData).map((category) => (
                 <button
                   key={category}
-                  className={`transition-all duration-300 ease-in-out font-bold py-5 px-4 rounded-box text-xl ${
-                    activeTab === category
+                  className={`transition-all duration-300 ease-in-out font-bold py-5 px-4 rounded-box text-xl ${activeTab === category
                       ? "bg-white text-[#bd2025] transform scale-105"
                       : "bg-black text-white"
-                  }`}
+                    }`}
                   onClick={() => setActiveTab(category)}
                 >
-                  {category.replace("_", " ")}
+                  {category.replace(/_/g, " ")}              
                 </button>
               ))}
             </div>

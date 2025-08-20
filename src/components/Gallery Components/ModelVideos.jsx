@@ -10,9 +10,15 @@ import video8 from '../../assets/videos/wildnes fest.mp4';
 import video9 from '../../assets/videos/Deki Safari 3.mp4';
 import video10 from '../../assets/videos/Deki Safari 4.mp4';
 import video11 from '../../assets/videos/Deki Safari 5.mp4';
+import video12 from '../../assets/videos/Deki Wildness 2025-2.mp4';
+import video13 from '../../assets/videos/Deki i Ema sunset 2-2.mp4';
+
+
 
 //---------------------- Videos Export -------------------------------
 const videoList = [
+  video13,
+  video12,
   video9,
   video10,
   video11,
