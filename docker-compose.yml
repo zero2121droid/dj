@@ -24,7 +24,7 @@ services:
       - 'traefik.http.middlewares.jorgacevicdj-wwwtoapex.redirectregex.replacement=https://jorgacevicdj/$1'
 
       # Router — jedinstven
-      - 'traefik.http.routers.jorgacevicdj.rule=Host(`jorgacevicdj`,`www.jorgacevicdj`)'
+      - 'traefik.http.routers.jorgacevicdj.rule=Host(`jorgacevicdj`,`www.jorgacevicdj.com`)'
       - 'traefik.http.routers.jorgacevicdj.entrypoints=websecure'
       - 'traefik.http.routers.jorgacevicdj.tls=true'
       - 'traefik.http.routers.jorgacevicdj.tls.certresolver=myresolver'
