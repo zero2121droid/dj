@@ -1,0 +1,34 @@
+version: '3.8'
+
+networks:
+  web:
+    external: true
+
+services:
+  webapp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: jorgacevicdj
+    restart: unless-stopped
+    expose:
+      - '3000'
+    networks:
+      - web
+    labels:
+      - 'traefik.enable=true'
+      - 'traefik.docker.network=web'
+
+      # Middleware — jedinstven naziv
+      - "traefik.http.middlewares.jorgacevicdj-wwwtoapex.redirectregex.regex=^https?://www\\.jorgacevicdj\\.com/(.*)"
+      - 'traefik.http.middlewares.jorgacevicdj-wwwtoapex.redirectregex.replacement=https://jorgacevicdj/$1'
+
+      # Router — jedinstven
+      - 'traefik.http.routers.jorgacevicdj.rule=Host(`jorgacevicdj`,`www.jorgacevicdj`)'
+      - 'traefik.http.routers.jorgacevicdj.entrypoints=websecure'
+      - 'traefik.http.routers.jorgacevicdj.tls=true'
+      - 'traefik.http.routers.jorgacevicdj.tls.certresolver=myresolver'
+      - 'traefik.http.routers.jorgacevicdj.middlewares=jorgacevicdj-wwwtoapex'
+
+      # Service — jedinstven
+      - 'traefik.http.services.jorgacevicdj.loadbalancer.server.port=3000'
