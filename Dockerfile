@@ -1,31 +1,17 @@
-# --- deps ---
-FROM node:18-alpine AS deps
+# --- build ---
+FROM node:20-alpine AS builder
 WORKDIR /app
 COPY package*.json ./
-RUN npm ci
-
-# --- build ---
-FROM node:18-alpine AS builder
-WORKDIR /app
-COPY --from=deps /app/node_modules ./node_modules
+RUN npm install --legacy-peer-deps
 COPY . .
 RUN npm run build
 
 # --- runtime ---
-FROM node:18-alpine AS runner
+FROM node:20-alpine AS runner
 WORKDIR /app
 ENV NODE_ENV=production
-ENV HOST=0.0.0.0
-ENV PORT=3000
-
-# Kopirajte samo što je potrebno
-COPY --from=builder /app/package.json ./package.json
-COPY --from=builder /app/node_modules ./node_modules
-COPY --from=builder /app/.next ./.next
-COPY --from=builder /app/public ./public
-COPY --from=builder /app/next.config.js ./
-
+RUN npm install -g serve
+COPY --from=builder /app/build ./build
 EXPOSE 3000
-
-# ISPRAVNA KOMANDA - bez dodatnih argumenata
-CMD ["npm", "start"]
+CMD ["serve", "-s", "build", "-l", "3000"]
+    
