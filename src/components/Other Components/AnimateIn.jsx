@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import cn from "mxcn";
+import { clsx as cn } from "clsx";
 import { useInView } from 'react-intersection-observer';
 // or if using shadcn:
 // import { cn } from "@/lib/utils"; // https://github.com/shadcn-ui/ui/blob/main/apps/www/lib/utils.ts

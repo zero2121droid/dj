@@ -4,22 +4,22 @@
   "private": true,
   "dependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.2",
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "emailjs-com": "^3.2.0",
-    "framer-motion": "^11.11.10",
-    "mxcn": "^2.0.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.0.1",
+    "@testing-library/user-event": "^14.5.2",
+    "@emailjs/browser": "^4.4.1",
+    "framer-motion": "^11.11.17",
+    "clsx": "^2.1.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^5.3.0",
     "react-intersection-observer": "^9.13.1",
     "react-modal": "^3.16.1",
     "react-player": "^2.16.0",
-    "react-router-dom": "^6.27.0",
-    "react-scripts": "5.0.1",
+    "react-router-dom": "^6.28.0",
+    "react-scripts": "^5.0.1",
     "react-youtube": "^10.1.0",
-    "web-vitals": "^2.1.4",
+    "web-vitals": "^4.2.4",
     "yet-another-react-lightbox": "^3.21.6"
   },
   "scripts": {
@@ -49,7 +49,15 @@
   "devDependencies": {
     "autoprefixer": "^10.4.20",
     "daisyui": "^4.12.14",
-    "postcss": "^8.4.47",
+    "postcss": "^8.5.1",
     "tailwindcss": "^3.4.14"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "overrides": {
+    "react-scripts": {
+      "typescript": "^5.6.3"
+    }
   }
 }

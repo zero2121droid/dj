@@ -6,7 +6,7 @@ import video2 from "../../assets/deki la casa-2.mp4";
 import image from "../../assets/resized/promo/ISP_3339.jpg";
 import imagesresized from '../../assets/resized/safari/ISP_7237JPG.jpg'
 import Toast from '../Other Components/Toast';
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 import promoimage from '../../assets/resized/promo/ISP_4277.jpg'
 import AnimateIn from "./AnimateIn";
 import { FaEnvelope, FaInstagram, FaTiktok } from 'react-icons/fa';
