@@ -3,11 +3,11 @@ import React, { useEffect, useRef, useState } from 'react';
 import video from '../../assets/Landscape La CASA.mp4';
 
 import video2 from '../../assets/deki la casa-2.mp4';
-import image from '../../assets/resized/promo/ISP_3339.jpg';
+import image from '../../assets/resized/promo/ISP_0690.jpg';
 import imagesresized from '../../assets/resized/safari/ISP_7237JPG.jpg';
 import Toast from '../Other Components/Toast';
 import emailjs from '@emailjs/browser';
-import promoimage from '../../assets/resized/promo/ISP_4277.jpg';
+import promoimage from '../../assets/resized/promo/ISP_0659.jpg';
 import AnimateIn from './AnimateIn';
 import { FaEnvelope, FaInstagram, FaTiktok } from 'react-icons/fa';
 
@@ -67,7 +67,7 @@ const Content = () => {
   const isMobile = useMediaQuery('(max-width: 640px)');
   const currentVideo = isMobile ? video2 : video;
 
-  const backgroundImage = isMobile ? `url(${imagesresized})` : `url(${image})`;
+  const backgroundImage = isMobile ? `url(${image})` : `url(${image})`;
 
   return (
     <div id="content">
