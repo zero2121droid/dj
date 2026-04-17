@@ -1,7 +1,7 @@
 import React from 'react';
 import GalleryContent from '../components/Gallery Components/GalleryContent';
 import imagesresized from '../assets/resized/safari/ISP_7185JPG.jpg';
-import imagesresized2 from '../assets/resized/la casa/part 4/ISP_1512.jpg';
+import imagesresized2 from '../assets/resized/promo/ISP_0683.jpg';
 
 const Gallery = () => {
   return (

@@ -160,6 +160,31 @@ import promoImage56 from '../../assets/resized/promo/ISP_3365.jpg';
 import promoImage57 from '../../assets/resized/promo/ISP_3370.jpg';
 import promoImage58 from '../../assets/resized/promo/ISP_3374.jpg';
 import promoImage59 from '../../assets/resized/promo/ISP_3375.jpg';
+
+// Nove slike 16.04.2026
+import promoImage60 from '../../assets/resized/promo/ISP_0638.jpg';
+import promoImage61 from '../../assets/resized/promo/ISP_0656.jpg';
+import promoImage62 from '../../assets/resized/promo/ISP_0658.jpg';
+import promoImage63 from '../../assets/resized/promo/ISP_0659.jpg';
+import promoImage64 from '../../assets/resized/promo/ISP_0662.jpg';
+import promoImage65 from '../../assets/resized/promo/ISP_0663.jpg';
+import promoImage66 from '../../assets/resized/promo/ISP_0665.jpg';
+import promoImage67 from '../../assets/resized/promo/ISP_0673.jpg';
+import promoImage68 from '../../assets/resized/promo/ISP_0678.jpg';
+import promoImage69 from '../../assets/resized/promo/ISP_0683.jpg';
+import promoImage70 from '../../assets/resized/promo/ISP_0685.jpg';
+import promoImage71 from '../../assets/resized/promo/ISP_0686.jpg';
+import promoImage72 from '../../assets/resized/promo/ISP_0690.jpg';
+import promoImage73 from '../../assets/resized/promo/ISP_0691.jpg';
+import promoImage74 from '../../assets/resized/promo/ISP_0694.jpg';
+import promoImage75 from '../../assets/resized/promo/ISP_0695.jpg';
+import promoImage76 from '../../assets/resized/promo/ISP_0697.jpg';
+import promoImage77 from '../../assets/resized/promo/ISP_0699.jpg';
+import promoImage78 from '../../assets/resized/promo/ISP_0701.jpg';
+import promoImage79 from '../../assets/resized/promo/ISP_0702.jpg';
+import promoImage80 from '../../assets/resized/promo/ISP_0704.jpg';
+import promoImage81 from '../../assets/resized/promo/ISP_0708.jpg';
+import promoImage82 from '../../assets/resized/promo/ISP_0712.jpg';
 //--------------------------------------------------------------------
 
 //La Casa slike part 1
@@ -360,6 +385,29 @@ const laCasa  = [
   export { laCasa };
 
 const promo = [
+    promoImage60,
+    promoImage61,
+    promoImage62,
+    promoImage63,
+    promoImage64,
+    promoImage65,
+    promoImage66,
+    promoImage67,
+    promoImage68,
+    promoImage69,
+    promoImage70,
+    promoImage71,
+    promoImage72,
+    promoImage73,
+    promoImage74,
+    promoImage75,
+    promoImage76,
+    promoImage77,
+    promoImage78,
+    promoImage79,
+    promoImage80,
+    promoImage81,
+    promoImage82,
     promoImage37,
     promoImage38,
     promoImage39,
