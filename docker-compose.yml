@@ -3,7 +3,7 @@ version: '3.8'
 services:
   web:
     build: .
-    container_name: jorgacevicdj # Drugačije ime kontejnera
+    container_name: jorgacevicdj
     restart: always
     ports:
-      - '127.0.0.1:3006:80' # Mapiramo ga na lokalni port 3001 jer je 3000 zauzet
+      - '127.0.0.1:3006:3000' # Host port 3006 preslikava se na kontejner port 3000
