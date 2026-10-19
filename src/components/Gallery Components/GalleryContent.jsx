@@ -6,6 +6,7 @@ import { wildFestImages } from "./ModelImages";
 import { promo } from "./ModelImages";
 import { laCasa } from "./ModelImages";
 import { wildnessFest2025 } from "./ModelImages";
+import { tomorrowle2026 } from "./ModelImages";
 import { SlPicture } from "react-icons/sl";
 import { GoDeviceCameraVideo } from "react-icons/go";
 import { FaArrowUp } from "react-icons/fa";
@@ -14,12 +15,13 @@ import GalleryVideos from "./GalleryVideos";
 import videoList from "./ModelVideos";
 
 const GalleryContent = () => {
-  const [activeTab, setActiveTab] = useState("La_Casa");
+  const [activeTab, setActiveTab] = useState("TomorrowLE");
   const [activeTab2, setActiveTab2] = useState("Pics");
   const [showScrollButton, setShowScrollButton] = useState(false);
 
   // Simulated data for different categories
   const galleryData = {
+    TomorrowLE: tomorrowle2026,
     La_Casa: laCasa,
     Promo: promo,
     Sunset_Fest: sunsetImages,

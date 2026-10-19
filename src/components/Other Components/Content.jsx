@@ -9,7 +9,15 @@ import Toast from '../Other Components/Toast';
 import emailjs from '@emailjs/browser';
 import promoimage from '../../assets/resized/promo/ISP_0659.jpg';
 import AnimateIn from './AnimateIn';
-import { FaEnvelope, FaInstagram, FaTiktok } from 'react-icons/fa';
+import { FaEnvelope, FaInstagram, FaTiktok, FaNewspaper } from 'react-icons/fa';
+
+const articles = [
+  {
+    title: 'TomorrowLE 2026: Raffa Guido & Dejan Jorgaćević | Leskovac, La Casa | 2. okt 2026.',
+    source: 'urbanbug.net',
+    url: 'https://urbanbug.net/desavanje/tomorrowle-2026-raffa-guido-dejan-jorgacevic-2026-10-02',
+  },
+];
 
 // Custom hook for media query handling
 const useMediaQuery = (query) => {
@@ -160,6 +168,38 @@ const Content = () => {
               pomera granice, kako na sceni tako i van nje, ostavljajući
               neizbrisiv trag na muzičkoj sceni Balkana.
             </p>
+          </div>
+        </AnimateIn>
+
+        {/* Articles */}
+        <AnimateIn
+          from="opacity-0 blur-lg"
+          to="opacity-100 blur-none"
+          delay={100}
+        >
+          <div className="mx-auto w-full max-w-5xl bg-black bg-opacity-70 text-gray-100 p-6 rounded-lg">
+            <h2 className="text-2xl sm:text-3xl font-bold font-mono text-center">
+              U medijima
+            </h2>
+            <div className="divider divider-error my-4 w-full max-w-full"></div>
+            <ul className="space-y-4">
+              {articles.map((article) => (
+                <li key={article.url}>
+                  <a
+                    href={article.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-4 bg-neutral-900 hover:bg-neutral-800 transition-colors p-4 rounded-lg"
+                  >
+                    <FaNewspaper className="text-[#bd2025] text-2xl shrink-0" />
+                    <div className="text-left font-mono">
+                      <p className="font-bold text-sm sm:text-base">{article.title}</p>
+                      <p className="text-[#bd2025] text-xs sm:text-sm">{article.source}</p>
+                    </div>
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
         </AnimateIn>
       </div>
