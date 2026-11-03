@@ -6,4 +6,4 @@ services:
     container_name: jorgacevicdj
     restart: always
     ports:
-      - '127.0.0.1:3018:3000' # Host port 3006 preslikava se na kontejner port 3000
+      - '127.0.0.1:3006:3000' # Host port 3006 preslikava se na kontejner port 3000
