@@ -1,82 +1,90 @@
 import React from 'react';
-import VideoContent from '../components/Video Components/VideoContent';
-import VideoHeader from '../components/Video Components/VideoHeader';
 import image from '../assets/rsz_isp_4290.jpg';
-import imageYouTube from '../assets/ISP_5671.JPG';
-import { PiYoutubeLogoBold } from 'react-icons/pi';
-import { ImYoutube2 } from "react-icons/im";
-import AnimateIn from '../components/Other Components/AnimateIn';
+import { CONTACT, MIXES } from '../data/site';
+import { usePlayer } from '../components/Player/PlayerContext';
+import { PageHero, Reveal } from '../components/Other Components/Motion';
+
+const thumb = (id, size = 'hqdefault') => `https://img.youtube.com/vi/${id}/${size}.jpg`;
+
+// Thumbnail that loads the mix into the site-wide mini player instead of leaving the page
+const Thumb = ({ mix, i, large = false }) => {
+  const { index, open, playing, playMix } = usePlayer();
+  const current = open && index === i;
+  return (
+    <button
+      onClick={() => playMix(i)}
+      aria-label={`Pusti ${mix.title}`}
+      className="group relative block w-full aspect-video overflow-hidden bg-neutral-900 text-left"
+    >
+      <img
+        src={thumb(mix.id, large ? 'maxresdefault' : 'hqdefault')}
+        onError={(e) => { e.currentTarget.src = thumb(mix.id); }}
+        alt=""
+        loading="lazy"
+        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+      />
+      {mix.number && (
+        <span className="absolute left-0 top-0 bg-brand font-display text-xl md:text-2xl px-2.5 py-1">{mix.number}</span>
+      )}
+      <span
+        className={`absolute inset-0 grid place-items-center text-3xl transition-colors ${
+          current ? 'bg-brand/60' : 'bg-transparent group-hover:bg-brand/55'
+        }`}
+      >
+        {current ? (playing ? 'SVIRA' : '❚❚') : '▶'}
+      </span>
+    </button>
+  );
+};
 
 const Videos = () => {
+  const [latest, ...older] = MIXES;
+
   return (
-    <div
-      className="relative bg-black text-white min-h-screen flex flex-col items-center gap-8 bg-cover bg-center px-4 sm:px-8 py-10"
-      style={{ backgroundImage: `url(${image})` }}
-    >
-      {/* Optional Background Overlay */}
-      <div className="absolute inset-0 bg-black opacity-50"></div>
+    <div>
+      <PageHero image={image} eyebrow="YouTube · @JorgacevicDJ" title="Mixevi" outline="i mashupovi" />
 
-      {/* Content Wrapper */}
-      <div className="relative z-10 flex flex-col items-center w-full">
-        {/* Header */}
-        <VideoHeader />
-
-        {/* Video Grid with Increased Gap */}
-        <div className="grid grid-cols-1 gap-12 w-full mt-3 max-w-7xl">
-          {/* Each pair of videos in a separate div */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <VideoContent videoId="uHXUZfDbmKI" />
-          <VideoContent videoId="bXnClsjuhjE" />
-            
-          </div>
-
-          <AnimateIn 
-            from="opacity-0 translate-x-32" 
-            to="opacity-100 translate-y-0 translate-x-0"
-            delay={100}
-          >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <VideoContent videoId="ErOt_ZTD3cs" />
-          <VideoContent videoId="1-ObER9kUb0" />
-           
-          
-          </div>
-          </AnimateIn>
-          <AnimateIn 
-            from="opacity-0 -translate-x-32" 
-            to="opacity-100 translate-y-0 translate-x-0"
-            delay={200}
-          >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-           <VideoContent videoId="FUb43UZqrK4" />
-          <VideoContent videoId="uFHcia4IoGA" />
-       
-          </div>
-          </AnimateIn>
+      <div className="max-w-7xl mx-auto px-4 md:px-8">
+        <Reveal className="pt-8 pb-14 grid md:grid-cols-[1.4fr_1fr] gap-6 md:gap-8 items-center">
+          <Thumb mix={latest} i={0} large />
           <div>
-          <AnimateIn 
-            from="opacity-0 blur-lg" 
-            to="opacity-100 blur-none"
-        
-          >
-          <a href='https://www.youtube.com/@JorgacevicDJ/videos' target="_blank" rel="noopener noreferrer">
-          <button class=" bg-neutral-900 text-white hover:bg-white hover:text-[#bd2025] transition-all delay-150 ease-in-out font-bold py-0 px-10 md:py-2 md:px-16 rounded-full text-3xl">
-          <div className='flex items-center justify-between gap-5'>
-          <ImYoutube2 className='w-24 h-24'></ImYoutube2>
-          <img
-            src={imageYouTube}
-            alt="Channel Logo"
-            className="w-16 h-16 rounded-full"
-            loading="lazy"
-          />
+            <p className="text-xs font-bold tracking-[.18em] text-brand mb-2">NAJNOVIJE</p>
+            <h2 className="font-display uppercase text-[clamp(2.5rem,5vw,4.5rem)] leading-[.95] mb-4">{latest.title}</h2>
+            <div className="flex flex-wrap gap-1.5 mb-5">
+              {latest.artists.split(',').map((a) => (
+                <span key={a} className="border border-white/15 px-2 py-1 text-xs text-white/60">{a.trim()}</span>
+              ))}
+            </div>
+            <p className="text-xs text-white/50">Pušta se u plejeru u uglu i svira dalje dok šetaš po sajtu.</p>
           </div>
-         
-          </button>
-          </a>
-          </AnimateIn>
+        </Reveal>
+
+        <Reveal className="pb-14">
+          <h2 className="font-display uppercase text-[clamp(3rem,8vw,6.5rem)] leading-none mb-6">Starije</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-6">
+            {older.map((mix, k) => (
+              <div key={mix.id}>
+                <Thumb mix={mix} i={k + 1} />
+                <p className="mt-3 text-base font-bold">{mix.title}</p>
+                <p className="text-xs text-white/60">{mix.artists}</p>
+              </div>
+            ))}
           </div>
-          
-        </div>
+        </Reveal>
+
+        <Reveal className="pb-16">
+          <div className="flex flex-wrap items-center justify-between gap-4 border border-white/15 p-5 md:p-6">
+            <b className="font-display font-normal uppercase text-3xl md:text-4xl">Ceo kanal</b>
+            <a
+              href={CONTACT.youtube}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-brand hover:bg-brand-hi transition-colors px-5 py-3 text-sm font-bold uppercase tracking-widest"
+            >
+              YouTube ↗
+            </a>
+          </div>
+        </Reveal>
       </div>
     </div>
   );

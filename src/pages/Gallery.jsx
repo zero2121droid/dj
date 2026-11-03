@@ -1,19 +1,12 @@
 import React from 'react';
 import GalleryContent from '../components/Gallery Components/GalleryContent';
-import imagesresized from '../assets/resized/safari/ISP_7185JPG.jpg';
-import imagesresized2 from '../assets/resized/promo/ISP_0683.jpg';
+import heroImage from '../assets/resized/promo/ISP_0683.jpg';
+import { PageHero } from '../components/Other Components/Motion';
 
 const Gallery = () => {
   return (
-    <div
-      className="relative bg-black text-white min-h-screen flex flex-col items-center px-4 sm:px-8 py-10"
-      style={{
-        backgroundImage: `url(${imagesresized2})`,
-        backgroundSize: 'cover', // Ensures the image covers the entire area
-        backgroundPosition: 'center', // Centers the image
-        backgroundRepeat: 'no-repeat', // Prevents tiling
-      }}
-    >
+    <div>
+      <PageHero image={heroImage} eyebrow="Galerija" title="Pogledaj energiju" outline="uživo" />
       <GalleryContent />
     </div>
   );

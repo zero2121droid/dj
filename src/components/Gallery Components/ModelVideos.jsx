@@ -33,4 +33,21 @@ const videoList = [
   video1,
 ];
 
+// Same order as videoList, with names for the gallery player
+export const galleryVideos = [
+  { src: video13, title: 'Deki i Ema · Sunset Fest' },
+  { src: video12, title: 'Wildness Fest 2025' },
+  { src: video9, title: 'Safari ABC' },
+  { src: video10, title: 'Safari ABC' },
+  { src: video11, title: 'Safari ABC' },
+  { src: video2, title: 'Bella Nella' },
+  { src: video3, title: 'Club Infinity' },
+  { src: video4, title: 'Safari ABC' },
+  { src: video5, title: 'Nastup' },
+  { src: video6, title: 'Sunset Fest' },
+  { src: video7, title: 'Wildness Fest' },
+  { src: video8, title: 'Wildness Fest' },
+  { src: video1, title: 'Arena Club Negotin' },
+];
+
 export default videoList;

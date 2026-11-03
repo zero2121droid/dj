@@ -5,9 +5,9 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  background: #000;
+  color: #fff;
+  font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -16,3 +16,110 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Everything is sized in rem, so raising the root size scales the whole site up on big screens */
+@media (min-width: 1280px) { html { font-size: 17px; } }
+@media (min-width: 1536px) { html { font-size: 18px; } }
+@media (min-width: 1920px) { html { font-size: 20px; } }
+
+@layer utilities {
+  /* Hollow display type used for the second line of big headings */
+  .text-outline {
+    color: transparent;
+    -webkit-text-stroke: 2px #fff;
+  }
+}
+
+/* Equalizer bars under the hero name */
+@keyframes eq {
+  to { height: 100%; }
+}
+.eq-bar {
+  width: 5px;
+  height: 20%;
+  background: #bd2025;
+  animation: eq 0.48s ease-in-out infinite alternate;
+}
+
+/* Endless artist strip; the list is rendered twice so -50% loops seamlessly */
+@keyframes marquee {
+  to { transform: translateX(-50%); }
+}
+.marquee-track {
+  display: inline-block;
+  animation: marquee 40s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .eq-bar,
+  .marquee-track {
+    animation: none;
+  }
+}
+
+/* Gallery lightbox in Klub style (yet-another-react-lightbox + plugins) */
+.klub-lightbox {
+  --yarl__color_backdrop: rgba(0, 0, 0, 0.96);
+  --yarl__color_button: rgba(255, 255, 255, 0.85);
+  --yarl__color_button_active: #bd2025;
+  --yarl__thumbnails_container_background_color: #000;
+  --yarl__thumbnails_thumbnail_background: #111;
+  --yarl__thumbnails_thumbnail_active_border_color: #bd2025;
+  --yarl__thumbnails_thumbnail_border_color: transparent;
+  --yarl__counter_color: #fff;
+  --yarl__counter_filter: none;
+  --yarl__slide_title_color: #fff;
+}
+.klub-lightbox .yarl__counter {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  padding: 1.1rem 1.25rem;
+}
+.klub-lightbox .yarl__slide_title {
+  font-family: 'Anton', Impact, sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  border-left: 5px solid #bd2025;
+  padding-left: 0.75rem;
+}
+.klub-lightbox .yarl__thumbnails_thumbnail { opacity: 0.45; transition: opacity 0.2s; }
+.klub-lightbox .yarl__thumbnails_thumbnail_active,
+.klub-lightbox .yarl__thumbnails_thumbnail:hover { opacity: 1; }
+.klub-lb-arrow {
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.4rem;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: background 0.2s, border-color 0.2s;
+}
+.yarl__navigation_prev:hover .klub-lb-arrow,
+.yarl__navigation_next:hover .klub-lb-arrow { background: #bd2025; border-color: #bd2025; }
+.yarl__navigation_prev:disabled .klub-lb-arrow,
+.yarl__navigation_next:disabled .klub-lb-arrow { opacity: 0.25; }
+
+/* Gallery clip player: range input as a thin red scrubber */
+.clip-range {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+.clip-range::-webkit-slider-runnable-track { height: 4px; background: transparent; }
+.clip-range::-moz-range-track { height: 4px; background: transparent; }
+.clip-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+  margin-top: -5px;
+  background: #fff;
+  border: 3px solid #bd2025;
+  border-radius: 0;
+}
+.clip-range::-moz-range-thumb { width: 10px; height: 10px; background: #fff; border: 3px solid #bd2025; border-radius: 0; }

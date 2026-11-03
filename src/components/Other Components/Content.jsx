@@ -1,23 +1,12 @@
-import React, { useEffect, useRef, useState } from 'react';
-// import video from "../../assets/cover-video.mp4";
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { FaNewspaper } from 'react-icons/fa';
+import { IoPause, IoPlay } from 'react-icons/io5';
 import video from '../../assets/Landscape La CASA.mp4';
-
 import video2 from '../../assets/deki la casa-2.mp4';
-import image from '../../assets/resized/promo/ISP_0690.jpg';
-import imagesresized from '../../assets/resized/safari/ISP_7237JPG.jpg';
-import Toast from '../Other Components/Toast';
-import emailjs from '@emailjs/browser';
-import promoimage from '../../assets/resized/promo/ISP_0659.jpg';
-import AnimateIn from './AnimateIn';
-import { FaEnvelope, FaInstagram, FaTiktok, FaNewspaper } from 'react-icons/fa';
-
-const articles = [
-  {
-    title: 'TomorrowLE 2026: Raffa Guido & Dejan Jorgaćević | Leskovac, La Casa | 2. okt 2026.',
-    source: 'urbanbug.net',
-    url: 'https://urbanbug.net/desavanje/tomorrowle-2026-raffa-guido-dejan-jorgacevic-2026-10-02',
-  },
-];
+import { ARTICLES, ARTISTS, GIGS, MIXES } from '../../data/site';
+import { usePlayer } from '../Player/PlayerContext';
+import { Reveal, Scramble } from './Motion';
 
 // Custom hook for media query handling
 const useMediaQuery = (query) => {
@@ -34,55 +23,26 @@ const useMediaQuery = (query) => {
   return matches;
 };
 
+const W = ({ children }) => <span className="text-white">{children}</span>;
+
+const EQ_BARS = Array.from({ length: 22 }, () => ({
+  delay: -(Math.random() * 0.5).toFixed(2),
+  duration: (0.3 + Math.random() * 0.4).toFixed(2),
+}));
+
 const Content = () => {
-  const [showToast, setShowToast] = useState(false);
-
-  const handleSendMessage = () => {
-    // Simulate a successful action
-    setShowToast(true);
-    setTimeout(() => setShowToast(false), 3000); // Hide after 3 seconds
-  };
-
-  const [count, setCount] = useState(0);
-
-  const form = useRef();
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs
-      .sendForm(
-        'service_9d0y8dw', // Service ID from EmailJS
-        'template_rwgg14t', // Template ID from EmailJS
-        form.current,
-        '5PBfDkeFBYXq3Po_j', // User ID from EmailJS
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          // alert("Message sent successfully!");
-          handleSendMessage();
-        },
-        (error) => {
-          console.log(error.text);
-          alert('An error occurred, please try again.');
-        },
-      );
-
-    e.target.reset();
-  };
-
   const isMobile = useMediaQuery('(max-width: 640px)');
   const currentVideo = isMobile ? video2 : video;
-
-  const backgroundImage = isMobile ? `url(${image})` : `url(${image})`;
+  const { index, playing, open, playMix, toggle } = usePlayer();
+  const latestPlaying = open && index === 0 && playing;
 
   return (
     <div id="content">
-      {/* Hero Section with Video */}
-      <div className="hero">
+      {/* Hero: video at its natural size, name over the lower left */}
+      <section className="relative overflow-hidden">
         <video
-          className="w-full mx-auto"
+          key={currentVideo}
+          className="w-full h-[100svh] min-h-[32rem] object-cover block"
           preload="metadata"
           autoPlay
           loop
@@ -94,236 +54,148 @@ const Content = () => {
           <source src={currentVideo} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-      </div>
-
-      {/* Content Section */}
-      <div
-        className="bg-black text-white min-h-screen flex flex-col items-center justify-center gap-8 bg-cover bg-center px-4 pb-10 sm:px-8 sm:py-20"
-        style={{ backgroundImage: backgroundImage }}
-      >
-        <AnimateIn
-          from="opacity-0 blur-lg"
-          to="opacity-100 blur-none"
-          delay={100}
-        >
-          <div className="card mx-auto text-center w-full max-w-5xl bg-black bg-opacity-70 text-gray-100 mt-12 p-6 rounded-lg">
-            <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold font-mono">
-              Dejan Jorgaćević
-            </h1>
-            <div className="divider divider-error my-4 w-full max-w-full"></div>
-            <p className="text-sm sm:text-base md:text-lg leading-relaxed font-bold text-[#bd2025] font-mono text-left sm:text-left">
-              Mladi i talentovani{' '}
-              <span className="text-white">Dejan Jorgaćević</span> DJ-ingom i
-              produkcijom počinje da se bavi 2014. godine. Radio je u mnogim
-              klubovima i na mnogim festivalima, sa imenima kao što su{' '}
-              <span className="text-white">DJ Dea</span>,{' '}
-              <span className="text-white">Igor Garnier</span>,{' '}
-              <span className="text-white">DJ Architect</span>,{' '}
-              <span className="text-white">Geo Da Silva</span>,{' '}
-              <span className="text-white">Cavin Viviano</span>,{' '}
-              <span className="text-white">Erick Kasell</span>,{' '}
-              <span className="text-white">Divolly and Markward</span> i mnogi
-              drugim. Takođe je sarađivao i sa domaćom scenom i delio stage sa
-              imenima kao što su: <span className="text-white">Coby</span>,{' '}
-              <span className="text-white">Edita</span>,{' '}
-              <span className="text-white">Biba</span>,{' '}
-              <span className="text-white">Seksi</span>,{' '}
-              <span className="text-white">Voyage</span>,{' '}
-              <span className="text-white">Desingerica</span>,{' '}
-              <span className="text-white">Sladja Alegro</span>,{' '}
-              <span className="text-white">Tropico</span>,{' '}
-              <span className="text-white">Ema Raduljko</span>,{' '}
-              <span className="text-white">Mike Ride</span>,{' '}
-              <span className="text-white">Gru</span>,{' '}
-              <span className="text-white">Gazda Paja</span>,{' '}
-              <span className="text-white">Sanja Vučić</span>...
-              <span className="text-white">Dejan Jorgaćević</span> je jedan od
-              najtraženijih na našim prostorima. On je resident DJ u{' '}
-              <span className="text-white">LA CASA</span> i{' '}
-              <span className="text-white">SAFARI ABC</span>. U njegovom setu se
-              može čuti sve od komercijalne house muzike pa do balkanske trend
-              muzike pa takođe i afro house.
-            </p>
-            <p className="text-sm sm:text-base md:text-lg leading-relaxed font-bold text-[#bd2025] font-mono text-left sm:text-left mt-4">
-              Njegova energija, harizma i sposobnost da "pročita" publiku čine
-              svaki njegov nastup nezaboravnim iskustvom. Dejan je poznat po
-              tome što svojom muzikom stvara jedinstvenu atmosferu koja spaja
-              ljude na plesnom podijumu. Pored DJ-inga, posvećen je i muzičkoj
-              produkciji, gde stalno eksperimentiše sa novim zvucima i
-              žanrovima, donoseći osveženje na domaću i regionalnu scenu.
-            </p>
-            <p className="text-sm sm:text-base md:text-lg leading-relaxed font-bold text-[#bd2025] font-mono text-left sm:text-left mt-4">
-              Sa preko decenije iskustva,{' '}
-              <span className="text-white">Dejan Jorgaćević</span> je razvio
-              prepoznatljiv stil koji kombinuje moderne ritmove sa klasičnim
-              elementima, omogućavajući mu da se prilagodi različitim
-              događajima, od ekskluzivnih privatnih zabava do masovnih
-              festivala. Njegova posvećenost muzici i ljubav prema umetnosti su
-              inspiracija mnogima, a njegovo ime postalo je sinonim za
-              kvalitetan provod.
-            </p>
-            <p className="text-sm sm:text-base md:text-lg leading-relaxed font-bold text-[#bd2025] font-mono text-left sm:text-left mt-4">
-              Kao jedan od vodećih DJ-eva na našim prostorima,{' '}
-              <span className="text-white">Dejan Jorgaćević</span> nastavlja da
-              pomera granice, kako na sceni tako i van nje, ostavljajući
-              neizbrisiv trag na muzičkoj sceni Balkana.
-            </p>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-transparent to-black/90" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/20 to-transparent" />
+        <div className="absolute bottom-8 md:bottom-16 left-4 md:left-10 z-10 pl-4 md:pl-6 border-l-[6px] md:border-l-8 border-brand">
+          <h1 className="font-display uppercase leading-[.86] text-[clamp(3.5rem,11vw,12rem)] [text-shadow:0_4px_40px_rgba(0,0,0,.65)]">
+            <Scramble text="Dejan" />
+            <span className="block">
+              <Scramble text="Jorgaćević" />
+            </span>
+          </h1>
+          <div className="flex items-end gap-[3px] h-10 md:h-14 mt-5" aria-hidden="true">
+            {EQ_BARS.map((b, i) => (
+              <span key={i} className="eq-bar" style={{ animationDelay: `${b.delay}s`, animationDuration: `${b.duration}s` }} />
+            ))}
           </div>
-        </AnimateIn>
-
-        {/* Articles */}
-        <AnimateIn
-          from="opacity-0 blur-lg"
-          to="opacity-100 blur-none"
-          delay={100}
-        >
-          <div className="mx-auto w-full max-w-5xl bg-black bg-opacity-70 text-gray-100 p-6 rounded-lg">
-            <h2 className="text-2xl sm:text-3xl font-bold font-mono text-center">
-              U medijima
-            </h2>
-            <div className="divider divider-error my-4 w-full max-w-full"></div>
-            <ul className="space-y-4">
-              {articles.map((article) => (
-                <li key={article.url}>
-                  <a
-                    href={article.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-4 bg-neutral-900 hover:bg-neutral-800 transition-colors p-4 rounded-lg"
-                  >
-                    <FaNewspaper className="text-[#bd2025] text-2xl shrink-0" />
-                    <div className="text-left font-mono">
-                      <p className="font-bold text-sm sm:text-base">{article.title}</p>
-                      <p className="text-[#bd2025] text-xs sm:text-sm">{article.source}</p>
-                    </div>
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </AnimateIn>
-      </div>
-      {/* Third Section */}
-      <div className="bg-black text-white min-h-screen flex flex-col items-center justify-center gap-8 px-4 py-10">
-        {/* First Row with Two Columns */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-7xl">
-          <div className="flex flex-col md:flex-row bg-neutral-900 text-white p-6 rounded-lg shadow-lg md:items-center md:space-x-6 max-w-3xl mx-auto">
-            {/* Image Section */}
-            <div className="w-full md:w-full">
-              <img
-                src={promoimage}
-                alt="Card image"
-                className="w-full h-auto object-cover rounded-lg"
-              />
-            </div>
-
-            {/* Divider */}
-            {/* <div className="border-l-2 border-gray-600 h-auto"></div> */}
-
-            {/* Contact Information */}
-            <div className="w-full md:w-1/2 mt-6 md:mt-0">
-              <ul className="text-gray-400 space-y-4">
-                {/* Email */}
-                <li className="flex items-center">
-                  <FaEnvelope className="text-[#bd2025] mr-4 text-xl" />
-                  <a
-                    href="mailto:djdekli996@gmail.com"
-                    className="hover:text-[#bd2025] break-words"
-                  >
-                    <span className="font-bold">djdekli996@gmail.com</span>
-                  </a>
-                </li>
-
-                {/* Instagram */}
-                <li className="flex items-center">
-                  <FaInstagram className="text-[#bd2025] mr-4 text-xl" />
-                  <a
-                    href="https://instagram.com/jorgacevicdj"
-                    className="hover:text-[#bd2025]"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <span className="font-bold">@jorgacevicdj</span>
-                  </a>
-                </li>
-
-                {/* TikTok */}
-                <li className="flex items-center">
-                  <FaTiktok className="text-[#bd2025] mr-4 text-xl" />
-                  <a
-                    href="https://tiktok.com/@jorgacevicdj"
-                    className="hover:text-[#bd2025]"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <span className="font-bold">@jorgacevicdj</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          {/* Second Card with Contact Form */}
-          <div className="card w-full max-w-3xl bg-neutral-900 shadow-xl">
-            <div className="card-body">
-              <h2 className="card-title text-center">Ostavite poruku</h2>
-              <form className="form-control" ref={form} onSubmit={sendEmail}>
-                <div className="form-control mb-4">
-                  <label className="label" htmlFor="name">
-                    <span className="label-text text-white">Ime</span>
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    placeholder="Unesite ime ovde"
-                    className="input input-bordered w-full"
-                    required
-                  />
-                </div>
-                <div className="form-control mb-4">
-                  <label className="label" htmlFor="email">
-                    <span className="label-text text-white">Email</span>
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="Unesite Email ovde"
-                    className="input input-bordered w-full"
-                    required
-                  />
-                </div>
-                <div className="form-control mb-4">
-                  <label className="label" htmlFor="message">
-                    <span className="label-text text-white">Poruka</span>
-                  </label>
-                  <textarea
-                    id="message"
-                    rows="4"
-                    name="message"
-                    placeholder="Napišite poruku ovde"
-                    className="textarea textarea-bordered w-full"
-                    required
-                  />
-                </div>
-                <button
-                  type="submit"
-                  className="bg-[#bd2025] px-3 py-3 rounded-lg w-full"
-                >
-                  Pošalji poruku
-                </button>
-              </form>
-            </div>
-          </div>
+          <Link
+            to="/booking"
+            className="inline-block mt-6 bg-brand hover:bg-brand-hi transition-colors px-7 py-4 text-sm md:text-base font-bold uppercase tracking-widest"
+          >
+            Booking →
+          </Link>
         </div>
+      </section>
 
-        {showToast && (
-          <Toast
-            message="Poruka je poslata!"
-            onClose={() => setShowToast(false)}
-          />
-        )}
+      {/* Artists he has shared the stage with */}
+      <div className="overflow-hidden whitespace-nowrap border-y border-white/15 py-4 md:py-5 font-display text-3xl md:text-5xl uppercase">
+        <div className="marquee-track">
+          {[...ARTISTS, ...ARTISTS].map((a, i) => (
+            <span key={i}>
+              <span className="mx-5">{a}</span>
+              <span className="text-brand">✶</span>
+            </span>
+          ))}
+        </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 md:px-8">
+        <Reveal className="py-14 md:py-20">
+          <h2 className="font-display uppercase text-[clamp(3rem,8vw,6.5rem)] leading-none mb-6">Bio</h2>
+          <div className="max-w-[68ch] space-y-5 text-base md:text-lg leading-relaxed text-white/70">
+            <p>
+              Mladi i talentovani <W>Dejan Jorgaćević</W> DJ-ingom i produkcijom počinje da se bavi 2014. godine.
+              Radio je u mnogim klubovima i na mnogim festivalima, sa imenima kao što su <W>DJ Dea</W>,{' '}
+              <W>Igor Garnier</W>, <W>DJ Architect</W>, <W>Geo Da Silva</W>, <W>Cavin Viviano</W>,{' '}
+              <W>Erick Kasell</W>, <W>Divolly and Markward</W> i mnogi drugi. Takođe je sarađivao i sa domaćom
+              scenom i delio stage sa imenima kao što su: <W>Coby</W>, <W>Edita</W>, <W>Biba</W>, <W>Seksi</W>,{' '}
+              <W>Voyage</W>, <W>Desingerica</W>, <W>Sladja Alegro</W>, <W>Tropico</W>, <W>Ema Raduljko</W>,{' '}
+              <W>Mike Ride</W>, <W>Gru</W>, <W>Gazda Paja</W>, <W>Sanja Vučić</W>...
+            </p>
+            <p>
+              <W>Dejan Jorgaćević</W> je jedan od najtraženijih na našim prostorima. On je resident DJ u{' '}
+              <W>LA CASA</W> i <W>SAFARI ABC</W>. U njegovom setu se može čuti sve od komercijalne house muzike pa
+              do balkanske trend muzike pa takođe i afro house.
+            </p>
+            <p>
+              Njegova energija, harizma i sposobnost da "pročita" publiku čine svaki njegov nastup nezaboravnim
+              iskustvom. Dejan je poznat po tome što svojom muzikom stvara jedinstvenu atmosferu koja spaja ljude
+              na plesnom podijumu. Pored DJ-inga, posvećen je i muzičkoj produkciji, gde stalno eksperimentiše sa
+              novim zvucima i žanrovima, donoseći osveženje na domaću i regionalnu scenu.
+            </p>
+            <p>
+              Sa preko decenije iskustva, <W>Dejan Jorgaćević</W> je razvio prepoznatljiv stil koji kombinuje
+              moderne ritmove sa klasičnim elementima, omogućavajući mu da se prilagodi različitim događajima, od
+              ekskluzivnih privatnih zabava do masovnih festivala. Njegova posvećenost muzici i ljubav prema
+              umetnosti su inspiracija mnogima, a njegovo ime postalo je sinonim za kvalitetan provod.
+            </p>
+            <p>
+              Kao jedan od vodećih DJ-eva na našim prostorima, <W>Dejan Jorgaćević</W> nastavlja da pomera granice,
+              kako na sceni tako i van nje, ostavljajući neizbrisiv trag na muzičkoj sceni Balkana.
+            </p>
+          </div>
+          <div className="grid grid-cols-3 gap-3 md:gap-6 mt-8 max-w-2xl">
+            {[
+              ['2014', 'Prvi nastup'],
+              ['2', 'Rezidencije'],
+              ['3', 'House · Balkan · Afro'],
+            ].map(([n, l]) => (
+              <div key={l} className="border-t-2 border-brand pt-3">
+                <strong className="block font-display font-normal text-4xl md:text-6xl leading-none">{n}</strong>
+                <small className="text-xs uppercase tracking-wider text-white/60">{l}</small>
+              </div>
+            ))}
+          </div>
+        </Reveal>
+
+        <Reveal className="pb-14 md:pb-20">
+          <h2 className="font-display uppercase text-[clamp(3rem,8vw,6.5rem)] leading-none mb-4">Nastupi</h2>
+          {GIGS.map((g) => (
+            <div
+              key={g.title}
+              className="grid grid-cols-[72px_minmax(0,1fr)] md:grid-cols-[110px_minmax(0,1fr)_auto] gap-x-4 items-baseline py-5 border-b border-white/15 text-base md:text-lg"
+            >
+              <span className="text-brand font-bold">{g.when}</span>
+              <span className="font-bold">
+                {g.title}
+                <small className="block font-normal text-sm text-white/60">{g.detail}</small>
+              </span>
+              <span className="col-start-2 md:col-start-3 text-xs uppercase tracking-wider text-white/60">{g.status}</span>
+            </div>
+          ))}
+        </Reveal>
+
+        <Reveal className="pb-14 md:pb-20">
+          <h2 className="font-display uppercase text-[clamp(3rem,8vw,6.5rem)] leading-none mb-6">Mixevi</h2>
+          <div className="grid grid-cols-[64px_minmax(0,1fr)] gap-5 items-center p-4 md:p-5 border border-white/15">
+            <button
+              onClick={() => (open && index === 0 ? toggle() : playMix(0))}
+              aria-label={latestPlaying ? 'Pauziraj' : 'Pusti najnoviji mix'}
+              className="w-16 h-16 grid place-items-center bg-brand hover:bg-brand-hi transition-colors text-2xl"
+            >
+              {latestPlaying ? <IoPause /> : <IoPlay />}
+            </button>
+            <div className="min-w-0">
+              <p className="font-bold uppercase">{MIXES[0].title}</p>
+              <p className="text-xs text-white/60 truncate">{MIXES[0].artists}</p>
+              <Link to="/videos" className="inline-block mt-2 text-xs text-brand hover:underline">
+                Svi mixevi →
+              </Link>
+            </div>
+          </div>
+        </Reveal>
+
+        <Reveal className="pb-16 md:pb-24">
+          <h2 className="font-display uppercase text-[clamp(3rem,8vw,6.5rem)] leading-none mb-6">U medijima</h2>
+          <ul className="space-y-3">
+            {ARTICLES.map((article) => (
+              <li key={article.url}>
+                <a
+                  href={article.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-4 p-4 md:p-5 border border-white/15 hover:bg-white/5 transition-colors"
+                >
+                  <FaNewspaper className="text-brand text-2xl shrink-0" />
+                  <div>
+                    <p className="font-bold text-sm md:text-base">{article.title}</p>
+                    <p className="text-brand text-xs md:text-sm">{article.source} ↗</p>
+                  </div>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </Reveal>
       </div>
     </div>
   );

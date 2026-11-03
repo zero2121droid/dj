@@ -4,7 +4,15 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        display: ['Anton', 'Impact', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'ui-monospace', 'Menlo', 'monospace'],
+      },
+      colors: {
+        brand: { DEFAULT: '#bd2025', hi: '#e2353b' },
+      },
+    },
     screens: {
       'sm': '640px',
       // => @media (min-width: 640px) { ... }
